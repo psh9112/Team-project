@@ -18,7 +18,7 @@
 
         .search {
             width: 80%;
-            margin: 0 auto;
+            margin: 0 auto 80px;
 
             p {
                 position: relative;
@@ -105,15 +105,20 @@
                 text-align: center;
 
                 button {
-                    width: 24px;
+                    width: 30px; height: 30px;
                     display: inline-block;
                     background: none;
                     outline: none;
-                    border: 1px solid #eee;
+                    border: 1px solid #ccc;
+                    border-radius: 10px;
                     text-align: center;
+                    position: relative;
 
                     img {
-                        width: 100%;
+                        width: 50%;
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
                     }
                 }
             }

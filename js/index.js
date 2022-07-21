@@ -3,7 +3,7 @@ $('footer').load('inc.html > footer > .footer');
 
 
 $.ajax({
-    url: '../api/youtube_video.json',
+    url: './api/youtube_video.json',
     success: function (data) {
         let source = '';
 

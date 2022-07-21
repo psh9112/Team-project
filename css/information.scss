@@ -17,6 +17,71 @@
             }
         }
 
+        .contain{
+            width: 100%;
+            margin: 0 auto 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .h3{
+                width: 50%;
+                padding-bottom: 5px;
+                text-align: center;
+                
+                &.active{
+                    border-bottom: 2px solid #004032;
+                }
+            }
+        }
+
+        .object{
+            width: 100%;
+            margin: 0 auto 40px;
+            .work{
+                width: 100%;
+                display: flex;
+                justify-content: left;
+                flex-wrap: wrap;
+                overflow: hidden;
+                li{
+                    display: inline-block;
+                    padding: 10px;
+                    margin: 5px;
+                    border: 1px solid #262626;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    text-align: center;
+
+                    &.active{
+                        background-color: #FFDD78;
+                    }
+                }
+            }
+
+            .protect{
+                width: 100%;
+                display: flex;
+                justify-content: left;
+                flex-wrap: wrap;
+                overflow: hidden;
+                display: none;
+                li{
+                    display: inline-block;
+                    padding: 10px;
+                    margin: 5px;
+                    border: 1px solid #262626;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    text-align: center;
+
+                    &.active{
+                        background-color: #FFDD78;
+                    }
+                }
+            }
+        }
+
     }
 
 

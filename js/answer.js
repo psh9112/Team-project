@@ -1,23 +1,26 @@
-/* async function data(dataUrl){
+async function data(dataUrl){
     
     let d = await fetch(dataUrl);
-    let e = d.json();
-    console.log(e)
-    // return e;
+    let e = await d.json();
+    
+    return e;
 
-    // $.ajax({
-    //     url:dataUrl,
-    //     success: function(data){
-    //         // console.log(data.item[0]);
-    //        d = data.item[0];
-    //     }
-    // });
+}
 
-} */
+let exec = async ()=>{
+    qna1( await data('./api/law_QnA1.json') );
+    qna2( await data('./api/law_QnA2.json') );
+}
+exec();
 
-// let d = data('./api/law_QnA1.json');
-// let e = data('./api/law_QnA2.json');
+function qna1(data){
+    console.log(data)
+}
 
+
+function qna2(data){
+    console.log(data)
+}
 
 
 /*
