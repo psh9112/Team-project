@@ -1,0 +1,92 @@
+@import url('./common.css');
+
+
+@media (min-width:320px) and (max-width:767px){
+
+    main{
+        width: 90%;
+        margin: 40px auto;
+        .search{
+            width: 80%;
+            margin: 0 auto;
+            p{
+                position: relative;
+                input{
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #004032;
+                    border-radius: 30px;
+                    outline: none;
+                    font-size: 1.2em;
+                }
+                img{
+                    width: 100%;
+                    position: absolute;
+                    right: 5%; top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .qna{
+            width: 100%;
+            margin: 40px auto;
+            .h5{
+                width: 100%;
+                padding-bottom: 10px;
+            }
+            div{
+                ul{
+                    li{
+                        width: 100%;
+                        padding: 10px;
+                        border-top: 1px solid #eee;
+                        border-bottom: 1px solid #eee;
+                        .container{
+                            width: 100%;
+                            margin-bottom: 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .question{
+                                width: 80%;    
+                                font-size: 0.9em;
+                                span:nth-of-type(1){}
+                                span:nth-of-type(2){}
+                            }
+
+                            .plus{
+                                width: 5%;
+                                span:nth-of-type(1){
+                                    width: 15px;
+                                    height: 2px;
+                                    border-bottom: 2px solid #262626;
+                                }
+                                span:nth-of-type(2){}
+                            }
+                        }
+
+                        .answer{
+                            width: 100%;
+                            padding: 15px 10px;
+                            background-color: #eee;
+                            font-size: 0.8em;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+}
