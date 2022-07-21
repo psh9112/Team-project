@@ -10,14 +10,21 @@
 
 html,
 body {
-    margin: 0;
+    margin: 0; padding:0;
 }
 
-h1,h2,h3,h4,h5,p,figure {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure {
+    margin: 0; padding:0;
 }
 
-ul,li {
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -28,8 +35,100 @@ a {
 }
 
 
-*{
+* {
     box-sizing: border-box;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     vertical-align: middle;
+}
+
+
+@media (max-width:767px) {
+    header {
+        width: 100%;
+        /* height: 130px; */
+        background-color: #004032;
+    }
+
+    header>.all {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header>.all>.top {
+        padding:20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        vertical-align: center;
+        align-items: center;
+    }
+
+    header>.all>.top>.logo {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        vertical-align: center;
+        align-items: center;
+    }
+
+    header>.all>.top>.logo>img {
+        width: 30%;
+    }
+
+    header>.all>.top>.logo>p {
+        font-family: 'Do Hyeon', sans-serif;
+        width: 65%;
+        font-size:2em;
+        color:white;
+        /* font-weight:bold; */
+    }
+
+    header>.all>.top>.burger {
+        width: 10%;
+        height:1.8em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header>.all>.top>.burger>span {
+        width: 80%;
+        margin: 0 auto;
+        height: 4px;
+        background-color: white;
+    }
+    header>.all>.popup{
+        display:none;
+    }
+
+
+    footer{
+        width:100%;
+        background-color: #CDCDCD;
+    }
+    footer > .footer{
+        width:90%;
+        margin:0 auto;
+        padding: 20px 0 30px;
+        text-align:center;
+    }
+    footer > .footer > ul{
+        padding-top:10px;
+        width:100%
+    }
+    footer > .footer > ul > li{
+        width:80%;
+        margin:0 auto;
+        display:flex;
+        justify-content: space-between;
+    }
+    footer > .footer > ul > li > a{
+        color: black;
+        font-size:0.8em;
+    }
+    footer > .footer > p{
+        margin-top:10px;
+        color: black;
+        font-size:0.7em;
+    }
 }
