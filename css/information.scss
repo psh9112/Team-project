@@ -1,0 +1,26 @@
+@import url('./common.css');
+
+@media (min-width:320px) and (max-width:767px) {
+
+    main {
+        width: 90%;
+        margin: 40px auto;
+
+        .topbtn {
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+            z-index: 1;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+
+
+
+
+}

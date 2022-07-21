@@ -10,7 +10,8 @@
 
 html,
 body {
-    margin: 0; padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -20,7 +21,8 @@ h4,
 h5,
 p,
 figure {
-    margin: 0; padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 ul,
@@ -41,18 +43,23 @@ a {
     vertical-align: middle;
 }
 
-.h1{
+.h1 {
     font-size: 4em;
     font-family: 'Do Hyeon', sans-serif;
 }
-.h2{
+
+.h2 {
     font-size: 3em;
     font-family: 'Do Hyeon', sans-serif;
 }
 
-.h5{
+.h3 {
+    font-size: 2em;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.h5 {
     font-size: 1.5em;
-    letter-spacing: 5px;
     color: #262626;
     font-family: 'Do Hyeon', sans-serif;
 }
@@ -70,7 +77,7 @@ a {
     }
 
     header>.all>.top {
-        padding:20px 0;
+        padding: 20px 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -93,14 +100,14 @@ a {
     header>.all>.top>.logo>p {
         font-family: 'Do Hyeon', sans-serif;
         width: 65%;
-        font-size:2em;
-        color:white;
+        font-size: 2em;
+        color: white;
         /* font-weight:bold; */
     }
 
     header>.all>.top>.burger {
         width: 10%;
-        height:1.8em;
+        height: 1.8em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -112,38 +119,44 @@ a {
         height: 4px;
         background-color: white;
     }
-    header>.all>.popup{
-        display:none;
+
+    header>.all>.popup {
+        display: none;
     }
 
 
-    footer{
-        width:100%;
+    footer {
+        width: 100%;
         background-color: #CDCDCD;
     }
-    footer > .footer{
-        width:90%;
-        margin:0 auto;
+
+    footer>.footer {
+        width: 90%;
+        margin: 0 auto;
         padding: 20px 0 30px;
-        text-align:center;
+        text-align: center;
     }
-    footer > .footer > ul{
-        padding-top:10px;
-        width:100%
+
+    footer>.footer>ul {
+        padding-top: 10px;
+        width: 100%
     }
-    footer > .footer > ul > li{
-        width:80%;
-        margin:0 auto;
-        display:flex;
+
+    footer>.footer>ul>li {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
         justify-content: space-between;
     }
-    footer > .footer > ul > li > a{
+
+    footer>.footer>ul>li>a {
         color: black;
-        font-size:0.8em;
+        font-size: 0.8em;
     }
-    footer > .footer > p{
-        margin-top:10px;
+
+    footer>.footer>p {
+        margin-top: 10px;
         color: black;
-        font-size:0.7em;
+        font-size: 0.7em;
     }
 }

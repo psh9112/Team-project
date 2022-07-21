@@ -1,0 +1,16 @@
+@import url("./common.css");
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    width: 90%;
+    margin: 40px auto;
+  }
+  main .topbtn {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 1;
+  }
+  main .topbtn img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=information.css.map */
