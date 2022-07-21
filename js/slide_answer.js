@@ -1,0 +1,46 @@
+
+
+$(function () {
+
+    $(".slide").slick({
+      prevArrow: false,
+      nextArrow: false,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 8000,
+      arrows: true,
+      draggable: true,
+      easing: 'linear',
+      infinite: true,
+      edgeFriction: 0.35,
+      fade: false,
+      focusOnSelect: false,
+      focusOnChange: false,
+      initialSlide: 0,
+      lazyLoad: 'ondemand',
+      mobileFirst: false,
+      pauseOnHover: true,
+      pauseOnFocus: true,
+      pauseOnDotsHover: false,
+      respondTo: 'window',
+      responsive: null,
+      rows: 1,
+      rtl: false,
+      slide: '',
+      slidesPerRow: 1,
+      speed: 500,
+      swipe: true,
+      swipeToSlide: false,
+      touchMove: true,
+      touchThreshold: 5,
+      useCSS: true,
+      useTransform: true,
+      variableWidth: false,
+      vertical: false,
+      verticalSwiping: false,
+      waitForAnimate: true,
+      zIndex: 1000
+    });
+  });

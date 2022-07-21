@@ -1,0 +1,96 @@
+@import url("./common.css");
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    width: 90%;
+    margin: 40px auto;
+  }
+  main .search {
+    width: 80%;
+    margin: 0 auto;
+  }
+  main .search p {
+    position: relative;
+  }
+  main .search p input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #004032;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1.2em;
+  }
+  main .search p img {
+    width: 100%;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  main .qna {
+    width: 100%;
+    margin: 40px auto 60px;
+  }
+  main .qna .h5 {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  main .qna .box01 ul li {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  main .qna .box01 ul li .container {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .qna .box01 ul li .container .question {
+    width: 80%;
+    font-size: 0.9em;
+  }
+  main .qna .box01 ul li .container .plus {
+    width: 5%;
+  }
+  main .qna .box01 ul li .container .plus span:nth-of-type(1) {
+    width: 15px;
+    height: 2px;
+    border-bottom: 2px solid #262626;
+  }
+  main .qna .box01 ul li .answer {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #eee;
+    font-size: 0.8em;
+    display: none;
+  }
+  main .qna .pagenum {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  main .qna .pagenum button {
+    width: 24px;
+    display: inline-block;
+    background: none;
+    outline: none;
+    border: 1px solid #eee;
+    text-align: center;
+  }
+  main .qna .pagenum button img {
+    width: 100%;
+  }
+  main .play {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  main .play .h5 {
+    margin-bottom: 10px;
+  }
+  main .play .video li iframe {
+    width: 100%;
+  }
+}/*# sourceMappingURL=answer.css.map */
