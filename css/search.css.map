@@ -1,1 +1,9 @@
-{"version":3,"sources":["search.scss"],"names":[],"mappings":"AAAQ,2BAAA","file":"search.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,mBAAI",
+    "sources": [
+        "search.scss"
+    ],
+    "names": [],
+    "file": "search.css"
+}

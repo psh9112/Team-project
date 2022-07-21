@@ -94,8 +94,11 @@ a {
         align-items: center;
     }
 
-    header>.all>.top>.logo>img {
-        width: 30%;
+    header>.all>.top>.logo>a{
+        width:30%;
+    }
+    header>.all>.top>.logo>a>img {
+        width: 100%;
     }
 
     header>.all>.top>.logo>p {
