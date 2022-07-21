@@ -57,9 +57,13 @@ a {
 }
 .h5{
     font-size: 1.5em;
-    color: #262626;
     font-family: 'Do Hyeon', sans-serif;
 }
+
+.split{
+    font-size: 12px;
+}
+
 
 @media (max-width:767px) {
     header {
