@@ -54,6 +54,7 @@ a {
     font-size: 1.5em;
     letter-spacing: 5px;
     color: #262626;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 @media (max-width:767px) {
