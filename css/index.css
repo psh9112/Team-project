@@ -1,0 +1,227 @@
+@import url("./common.css");
+.tab {
+  width: 100%;
+  background-color: #004032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0 20px;
+}
+
+.tab > .sub {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tab > .sub > a {
+  font-family: 'Do Hyeon', sans-serif;
+  color: white;
+  font-size: 1em;
+  letter-spacing: -7%;
+}
+
+.tab > .sub > span {
+  margin-top: 5px;
+  height: 0.8em;
+  width: 2px;
+  background-color: white;
+}
+
+main {
+  overflow: hidden;
+  width: 100%;
+  margin: 70px auto 40px;
+}
+
+main .section01 {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main .section01 > .title {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 2em;
+  color: #004032;
+  font-weight: bold;
+}
+
+main .section01 > .board {
+  margin: 30px auto 0;
+  height: 200px;
+  border: 1px solid #cdcdcd;
+  border-radius: 30px;
+}
+
+main .section01 > .board > .list {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+main .section01 > .board > .list > ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  vertical-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 10px 0;
+}
+
+main .section01 > .board > .list > ul > li {
+  border-radius: 15px;
+  width: 19%;
+  padding: 10px 5px;
+  margin-top: 2%;
+  background-color: #cdcdcd;
+}
+
+main .section01 > .board > .list > ul > li > a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .section01 > .board > .list > ul > li > a > img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+main .section01 > .board > .list > ul > li > a > p {
+  font-size: 0.8em;
+  color: black;
+}
+
+main .section01 > .board > .list > ul > li:nth-of-type(9) > a > p {
+  padding-top: 5px;
+  font-size: 0.6em;
+  white-space: pre-line;
+  line-height: 0.6em;
+}
+
+main .section01 > .board > .list > ul > li:nth-of-type(10) > a > p {
+  padding-top: 5px;
+  font-size: 0.6em;
+  white-space: pre-line;
+  line-height: 0.6em;
+}
+
+main .section02 {
+  width: 90%;
+  height: 280px;
+  padding: 20px;
+  margin: 80px auto 0;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #FFDD78;
+  position: relative;
+}
+
+main .section02 > img {
+  position: absolute;
+  left: -48%;
+  top: -40%;
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
+}
+
+main .section02 > p:nth-of-type(1) {
+  margin-top: 20px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 2em;
+  color: #26439E;
+  font-weight: bold;
+}
+
+main .section02 > .todayWord {
+  margin-top: 40px;
+  text-align: center;
+}
+
+main .section02 > .todayWord > p {
+  font-size: 1.5em;
+  color: #004032;
+  font-weight: bold;
+}
+
+main .section02 > p:last-child {
+  margin-top: 50px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 0.9em;
+}
+
+main .section03 {
+  width: 80%;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+main .section03 > p {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 2em;
+  color: #004032;
+  font-weight: bold;
+}
+
+main .section03 .slide-wrapper {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 200px;
+}
+
+main .section03 .slide-wrapper .slide {
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 20px;
+}
+
+main .section03 .slide-wrapper .slide > iframe {
+  width: 100%;
+  height: 100%;
+}
+
+main .section03 .slick-dots {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10px;
+}
+
+main > .section04 {
+  width: 90%;
+  margin: 80px auto 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=index.css.map */

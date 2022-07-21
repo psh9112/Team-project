@@ -41,6 +41,20 @@ a {
     vertical-align: middle;
 }
 
+.h1{
+    font-size: 4em;
+    font-family: 'Do Hyeon', sans-serif;
+}
+.h2{
+    font-size: 3em;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.h5{
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    color: #262626;
+}
 
 @media (max-width:767px) {
     header {
