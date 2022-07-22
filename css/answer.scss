@@ -20,7 +20,7 @@
 
         .search {
             width: 80%;
-            margin: 0 auto 80px;
+            margin: 0 auto 60px;
 
             p {
                 position: relative;
@@ -49,7 +49,7 @@
 
         .qna {
             width: 100%;
-            margin: 40px auto 60px;
+            margin: 0 auto 60px;
 
             .h5 {
                 width: 100%;
@@ -66,32 +66,43 @@
 
                         .container {
                             width: 100%;
-                            margin-bottom: 10px;
+                            padding-bottom: 10px;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
 
                             .question {
-                                width: 80%;
+                                width: 90%;
                                 font-size: 1em;
-
-                                span:nth-of-type(1) {}
-
-                                span:nth-of-type(2) {}
                             }
 
                             .plus {
-                                width: 10%;
-                                height: 30px;
-                                span{
-                                    width: 15px;
-                                }
-                                span:nth-of-type(1) {
+                                width: 20px;
+                                height: 20px;
+                                text-align: right;
+                                overflow: hidden;
+                                position: relative;
+                                transition: .5s;
+
+                                span {
                                     width: 100%;
-                                    border-bottom: 2px solid #262626;
+                                    border-top: 2px solid #262626;
+                                    position: absolute;
+                                    right: 5%;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    transition: .5s;
                                 }
 
-                                span:nth-of-type(2) {}
+                                span:nth-of-type(2) {
+                                    transform: rotate(90deg);
+                                }
+
+                                &.active {
+                                    span:nth-of-type(2) {
+                                        transform: rotate(0deg);
+                                    }
+                                }
                             }
                         }
 
@@ -131,29 +142,31 @@
                     }
                 }
             }
-        }
 
-        .play {
-            width: 100%;
-            margin: 0 auto;
-            overflow: hidden;
+            .play {
+                width: 100%;
+                margin: 0 auto;
+                overflow: hidden;
 
-            .h5 {
-                margin-bottom: 10px;
-            }
+                .h5 {
+                    margin-bottom: 10px;
+                }
 
-            .video {
-                li {
-                    iframe {
-                        width: 100%;
+                .video {
+                    li {
+                        iframe {
+                            width: 100%;
+                        }
                     }
                 }
             }
         }
+
+
+
+
+
     }
-
-
-
 
 
 

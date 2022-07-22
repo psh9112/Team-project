@@ -15,7 +15,7 @@
   }
   main .search {
     width: 80%;
-    margin: 0 auto 80px;
+    margin: 0 auto 60px;
   }
   main .search p {
     position: relative;
@@ -40,7 +40,7 @@
   }
   main .qna {
     width: 100%;
-    margin: 40px auto 60px;
+    margin: 0 auto 60px;
   }
   main .qna .h5 {
     width: 100%;
@@ -54,25 +54,37 @@
   }
   main .qna .box01 ul li .container {
     width: 100%;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   main .qna .box01 ul li .container .question {
-    width: 80%;
+    width: 90%;
     font-size: 1em;
   }
   main .qna .box01 ul li .container .plus {
-    width: 10%;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    text-align: right;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
   }
   main .qna .box01 ul li .container .plus span {
-    width: 15px;
-  }
-  main .qna .box01 ul li .container .plus span:nth-of-type(1) {
     width: 100%;
-    border-bottom: 2px solid #262626;
+    border-top: 2px solid #262626;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+  }
+  main .qna .box01 ul li .container .plus span:nth-of-type(2) {
+    transform: rotate(90deg);
+  }
+  main .qna .box01 ul li .container .plus.active span:nth-of-type(2) {
+    transform: rotate(0deg);
   }
   main .qna .box01 ul li .answer {
     width: 100%;
@@ -104,15 +116,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  main .play {
+  main .qna .play {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
   }
-  main .play .h5 {
+  main .qna .play .h5 {
     margin-bottom: 10px;
   }
-  main .play .video li iframe {
+  main .qna .play .video li iframe {
     width: 100%;
   }
 }/*# sourceMappingURL=answer.css.map */
