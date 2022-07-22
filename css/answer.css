@@ -19,19 +19,22 @@
   }
   main .search p {
     position: relative;
+    padding: 5px 10px;
+    border: 3px solid #004032;
+    border-radius: 40px;
   }
   main .search p input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #004032;
-    border-radius: 30px;
+    width: 80%;
+    margin-left: 15px;
+    padding: 5px;
+    border: none;
     outline: none;
     font-size: 1.2em;
   }
   main .search p img {
     width: 100%;
     position: absolute;
-    right: 5%;
+    right: 8%;
     top: 50%;
     transform: translateY(-50%);
   }

@@ -7,11 +7,13 @@
         width: 90%;
         margin: 40px auto;
 
-        .topbtn{
+        .topbtn {
             position: fixed;
-            right: 5%; bottom: 5%;
+            right: 5%;
+            bottom: 5%;
             z-index: 1;
-            img{
+
+            img {
                 width: 100%;
             }
         }
@@ -22,12 +24,15 @@
 
             p {
                 position: relative;
+                padding: 5px 10px;
+                border: 3px solid #004032;
+                border-radius: 40px;
 
                 input {
-                    width: 100%;
-                    padding: 10px;
-                    border: 2px solid #004032;
-                    border-radius: 30px;
+                    width: 80%;
+                    margin-left: 15px;
+                    padding: 5px;
+                    border: none;
                     outline: none;
                     font-size: 1.2em;
                 }
@@ -35,7 +40,7 @@
                 img {
                     width: 100%;
                     position: absolute;
-                    right: 5%;
+                    right: 8%;
                     top: 50%;
                     transform: translateY(-50%);
                 }
@@ -105,7 +110,8 @@
                 text-align: center;
 
                 button {
-                    width: 30px; height: 30px;
+                    width: 30px;
+                    height: 30px;
                     display: inline-block;
                     background: none;
                     outline: none;
@@ -117,7 +123,8 @@
                     img {
                         width: 50%;
                         position: absolute;
-                        top: 50%; left: 50%;
+                        top: 50%;
+                        left: 50%;
                         transform: translate(-50%, -50%);
                     }
                 }
@@ -132,9 +139,10 @@
             .h5 {
                 margin-bottom: 10px;
             }
-            .video{
-                li{
-                    iframe{
+
+            .video {
+                li {
+                    iframe {
                         width: 100%;
                     }
                 }
