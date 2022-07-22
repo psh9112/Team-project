@@ -133,15 +133,6 @@ main .section02 {
   text-align: center;
   border-radius: 30px;
   background-color: #FFDD78;
-  position: relative;
-}
-
-main .section02 > img {
-  position: absolute;
-  left: -48%;
-  top: -40%;
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
 }
 
 main .section02 > p:nth-of-type(1) {
@@ -161,6 +152,15 @@ main .section02 > .todayWord > p {
   font-size: 1.5em;
   color: #004032;
   font-weight: bold;
+  position: relative;
+}
+
+main .section02 > .todayWord > p > img {
+  position: absolute;
+  left: -59%;
+  top: -750%;
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
 }
 
 main .section02 > p:last-child {

@@ -124,14 +124,6 @@ main {
         text-align: center;
         border-radius: 30px;
         background-color: #FFDD78;
-        position: relative;
-
-        >img {
-            position: absolute;
-            left: -48%;
-            top: -40%;
-            transform: scale(0.2);
-        }
 
         >p:nth-of-type(1) {
             margin-top: 20px;
@@ -149,7 +141,15 @@ main {
                 font-size: 1.5em;
                 color: #004032;
                 font-weight: bold;
+                position:relative;
+                // border:1px solid black;
 
+                >img {
+                    // border:1px solid black;
+                    position: absolute;
+                    left:-59%; top:-750%;
+                    transform:scale(0.2);
+                }
             }
         }
 
@@ -171,23 +171,6 @@ main {
             color: #004032;
             font-weight: bold;
         }
-        // >.video{
-        //     >.slide{
-        //         width:100%;
-        //         margin:0 auto;
-        //         position:relative;
-        //         >.slick-list{
-        //             >.slick-track{
-
-        //             }
-        //         }
-        //         >li{
-
-        //         }
-        //     }
-        // }
-
-        
     }
 
     >.section04 {

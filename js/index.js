@@ -1,6 +1,3 @@
-$('header').load('inc.html > header > .all');
-$('footer').load('inc.html > footer > .footer');
-
 
 $.ajax({
     url: './api/youtube_video.json',
