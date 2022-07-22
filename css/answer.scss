@@ -81,11 +81,13 @@
                             }
 
                             .plus {
-                                width: 5%;
-
-                                span:nth-of-type(1) {
+                                width: 10%;
+                                height: 30px;
+                                span{
                                     width: 15px;
-                                    height: 2px;
+                                }
+                                span:nth-of-type(1) {
+                                    width: 100%;
                                     border-bottom: 2px solid #262626;
                                 }
 

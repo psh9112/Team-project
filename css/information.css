@@ -78,7 +78,7 @@
     position: relative;
   }
   main .explain .word {
-    padding: 10px 10px 40px;
+    padding: 10px 10px 50px;
   }
   main .explain .word .h3 {
     text-align: center;
@@ -90,17 +90,74 @@
     white-space: pre-line;
     line-height: 1.3;
   }
-  main .explain .more {
+  main .explain .btn .more {
     width: 100%;
-    padding: 5px 0;
+    padding: 3px 0 5px;
     font-size: 20px;
     display: block;
     text-align: center;
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: rgb(199, 199, 199);
+    background-color: #eee;
     border: none;
     outline: none;
+    border-top: 1px solid #ddd;
+    visibility: visible;
+  }
+  main .explain .btn .exit {
+    width: 100%;
+    padding: 3px 0 5px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    border-top: 1px solid #ddd;
+    visibility: hidden;
+  }
+  main .qna {
+    width: 100%;
+    margin: 60px auto;
+  }
+  main .qna .h5 {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  main .qna .box01 ul li {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  main .qna .box01 ul li .container {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .qna .box01 ul li .container .question {
+    width: 80%;
+    font-size: 1em;
+  }
+  main .qna .box01 ul li .container .plus {
+    width: 5%;
+  }
+  main .qna .box01 ul li .container .plus span:nth-of-type(1) {
+    width: 15px;
+    height: 2px;
+    border-bottom: 2px solid #262626;
+  }
+  main .qna .box01 ul li .answer {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #F4F1DE;
+    font-size: 0.8em;
+    display: none;
   }
 }/*# sourceMappingURL=information.css.map */

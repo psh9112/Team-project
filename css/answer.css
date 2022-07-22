@@ -64,11 +64,14 @@
     font-size: 1em;
   }
   main .qna .box01 ul li .container .plus {
-    width: 5%;
+    width: 10%;
+    height: 30px;
+  }
+  main .qna .box01 ul li .container .plus span {
+    width: 15px;
   }
   main .qna .box01 ul li .container .plus span:nth-of-type(1) {
-    width: 15px;
-    height: 2px;
+    width: 100%;
     border-bottom: 2px solid #262626;
   }
   main .qna .box01 ul li .answer {

@@ -10,8 +10,7 @@
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding:0;
 }
 
 h1,
@@ -21,8 +20,7 @@ h4,
 h5,
 p,
 figure {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding:0;
 }
 
 ul,
@@ -43,30 +41,32 @@ a {
     vertical-align: middle;
 }
 
-.h1 {
+.h1{
     font-size: 3em;
     font-family: 'Do Hyeon', sans-serif;
 }
 
-.h2 {
+.h2{
     font-size: 2.5em;
     font-family: 'Do Hyeon', sans-serif;
 }
 
-.h3 {
+.h3{
     font-size: 2em;
     font-family: 'Do Hyeon', sans-serif;
 }
-
-.h5 {
+.h5{
     font-size: 1.5em;
     font-family: 'Do Hyeon', sans-serif;
 }
 
-.split {
+.split{
     font-size: 12px;
 }
 
+.string{
+    font-size: 14px;
+}
 
 @media (max-width:767px) {
     header {
@@ -78,11 +78,10 @@ a {
     header>.all {
         width: 90%;
         margin: 0 auto;
-        position: relative;
     }
 
     header>.all>.top {
-        padding: 20px 0;
+        padding:20px 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -98,10 +97,9 @@ a {
         align-items: center;
     }
 
-    header>.all>.top>.logo>a {
-        width: 30%;
+    header>.all>.top>.logo>a{
+        width:30%;
     }
-
     header>.all>.top>.logo>a>img {
         width: 100%;
     }
@@ -109,14 +107,14 @@ a {
     header>.all>.top>.logo>p {
         font-family: 'Do Hyeon', sans-serif;
         width: 65%;
-        font-size: 2em;
-        color: white;
+        font-size:2em;
+        color:white;
         /* font-weight:bold; */
     }
 
     header>.all>.top>.burger {
         width: 10%;
-        height: 1.8em;
+        height:1.8em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -128,259 +126,38 @@ a {
         height: 4px;
         background-color: white;
     }
-
-    .popup {
-        width: 100%;
-        height: 100%;
-        /* display:none; */
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    .popup>.pop_bg {
-        width: 80%;
-        height: 100%;
-        background-color: white;
-        margin-left: 20%;
-        padding: 20px;
-    }
-
-    .popup>.pop_bg>.popuptop {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .popup>.pop_bg>.popuptop>.left {
-        width: 70%;
-    }
-
-    .popup>.pop_bg>.popuptop>.left>a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-        width: 100%;
-
-    }
-
-    .popup>.pop_bg>.popuptop>.left img {
-        width: 25%;
-    }
-
-    .popup>.pop_bg>.popuptop>.left p {
-        width: 70%;
-        padding-bottom: 10px;
-        color: #004032;
-    }
-
-    .popup>.pop_bg>.popuptop>.right {
-        margin-top: 20px;
-        width: 30%;
-        position: relative;
-        /* 엑스버튼 */
-    }
-
-    .popup>.pop_bg>.popuptop>.right>span:nth-of-type(1) {
-        width: 30px;
-        border-top: 2px solid black;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 10%;
-        ;
-        left: 60%;
-        ;
-        z-index: 12;
-    }
-
-    .popup>.pop_bg>.popuptop>.right>span:nth-of-type(2) {
-        width: 30px;
-        border-top: 2px solid black;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 10%;
-        ;
-        left: 60%;
-        ;
-        z-index: 12;
-    }
-
-    .search {
-        width: 90%;
-        margin: 10px auto 20px;
-    }
-
-    .search p {
-        position: relative;
-        padding: 3px 10px;
-        border: 3px solid #004032;
-        border-radius: 40px;
-        background-color: antiquewhite;
-    }
-
-    .search p input {
-        width: 80%;
-        margin-left: 15px;
-        padding: 5px;
-        border: none;
-        outline: none;
-        font-size: 1.2em;
-        background-color: antiquewhite;
-    }
-
-    .search p img {
-        width: 100%;
-        position: absolute;
-        right: 8%;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
+    header>.all>.popup{
+        display:none;
     }
 
 
-    .menu {
-        margin: 10px auto 20px;
-        width: 100%;
-        padding: 0px;
+    footer{
+        width:100%;
+        background-color: #CDCDCD;
     }
-
-    .menu>li {
-        width: 100%;
-        margin: 5px auto 0;
-        padding: 5px 0;
-    }
-
-    .menu>li>a {
-        display: inline-block;
-        width: 100%;
-        font-size: 1.5em;
-        font-weight: lighter;
-        color: white;
-        padding: 5px 20px;
-        background-color: #004032;
-    }
-
-    .menu>li>div {
-        background-color: antiquewhite;
-    }
-
-    .menu>li>div>ul {
-        width: 80%;
-        margin: 0 auto;
-        padding: 5px 0;
-    }
-
-    .menu>li>div>ul>li {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .menu>li>div>ul>li>a {
-        color: black;
-        padding: 5px 0px;
-        font-size: 0.9em;
-    }
-
-    .Q {
+    footer > .footer{
         width:90%;
         margin:0 auto;
-        letter-spacing:-0.8px;
+        padding: 20px 0 30px;
+        text-align:center;
     }
-
-    .Q>p {
-        font-size: 0.9em;
-        font-weight:bold;
-        margin-bottom:15px;
+    footer > .footer > ul{
+        padding-top:10px;
+        width:100%
     }
-
-    .Q>.one {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-bottom:15px;
+    footer > .footer > ul > li{
+        width:80%;
+        margin:0 auto;
+        display:flex;
+        justify-content: space-between;
     }
-
-    .Q>.one>p {
-        font-size: 0.8em;
-        margin-bottom:5px;
-        margin-right:10px;
-    }
-
-    .Q>.two {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-bottom:15px;
-    }
-
-    .Q>.two>p {
-        font-size: 0.8em;
-        width: 100%;
-        margin-bottom:5px;
-        margin-right:10px;
-
-    }
-
-    .Q>.two>a {
+    footer > .footer > ul > li > a{
         color: black;
         font-size:0.8em;
     }
-
-
-    .Q>div>.tit {
-        font-size: 0.9em;
-        margin-bottom:10px;
-        width: 100%;
-    }
-
-    .Q .link{
-        margin-top:20px;
-    }
-    .Q .link::after{
-        content:'';
-        display:block;
-        border-bottom:1px solid black;
-
-    }
-
-
-
-
-    footer {
-        width: 100%;
-        background-color: #CDCDCD;
-    }
-
-    footer>.footer {
-        width: 90%;
-        margin: 0 auto;
-        padding: 20px 0 30px;
-        text-align: center;
-    }
-
-    footer>.footer>ul {
-        padding-top: 10px;
-        width: 100%
-    }
-
-    footer>.footer>ul>li {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    footer>.footer>ul>li>a {
+    footer > .footer > p{
+        margin-top:10px;
         color: black;
-        font-size: 0.8em;
-    }
-
-    footer>.footer>p {
-        margin-top: 10px;
-        color: black;
-        font-size: 0.7em;
+        font-size:0.7em;
     }
 }
