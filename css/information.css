@@ -16,15 +16,9 @@
   main .contain {
     width: 100%;
     margin: 0 auto 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
   }
   main .contain .h3 {
     width: 50%;
@@ -40,14 +34,9 @@
   }
   main .object .work {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: left;
+    flex-wrap: wrap;
     overflow: hidden;
   }
   main .object .work li {
@@ -64,14 +53,9 @@
   }
   main .object .protect {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: left;
+    flex-wrap: wrap;
     overflow: hidden;
     display: none;
   }
@@ -87,5 +71,45 @@
   main .object .protect li.active {
     background-color: #FFDD78;
   }
-}
-/*# sourceMappingURL=information.css.map */
+  main .explain {
+    width: 100%;
+    padding-bottom: 50px;
+    margin: 0 auto 60px;
+    background-color: #F4F1DE;
+    position: relative;
+  }
+  main .explain .contain01 {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    overflow: scroll;
+  }
+  main .explain .contain01 .h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  main .explain .contain01 .split {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  main .explain .contain01 .h5 {
+    margin-bottom: 5px;
+  }
+  main .explain .contain01 .string {
+    white-space: pre-line;
+  }
+  main .explain .contain01 .btn {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  main .explain .contain01 .btn button {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+  }
+}/*# sourceMappingURL=information.css.map */
