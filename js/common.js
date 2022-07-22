@@ -1,21 +1,21 @@
-$('header').load('inc.html > header > .all', hello);
-$('footer').load('inc.html > footer > .footer');
+$('header').load('inc.html > header > .all',hello);
 $('.popup').load('inc.html > .popup > .pop_bg');
-
+$('footer').load('inc.html > footer > .footer');
 
 
 function hello() {
-    const burger = document.querySelector('.burger');
-    const pop = document.querySelector('.popup');
-    const popAll = document.querySelector('.popup > .pop_bg');
 
-    burger.addEventListener('click', function () {
-        pop.classList.add('active');
-        popAll.classList.add('left');
-
+    $('.burger').on('click', function () {
+        $('.popup').addClass('active');
+        $('.pop_bg').addClass('left');
         // setAttribute는 나중에
+
+        $('.right').on('click',function(){
+            $('.popup').removeClass('active');
+            $('.pop_bg').css('transform','translateX(100%)');
+        })
+
     })
 
     
 }
-
