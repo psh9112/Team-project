@@ -22,7 +22,6 @@ function qna2(data){
     console.log(data)
 }
 
-
 /*
 fetch('data3.json')
 .then(function(data3제이슨 파일의 데이터를 전달받는다.){

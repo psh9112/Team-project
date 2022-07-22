@@ -73,31 +73,39 @@
   }
   main .explain {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 60px;
     background-color: #F4F1DE;
     position: relative;
   }
-  main .explain .word {
+  main .explain > div {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  main .explain > div .word {
     padding: 10px 10px 50px;
+    overflow: hidden;
   }
-  main .explain .word .h3 {
+  main .explain > div .word .h3 {
     text-align: center;
   }
-  main .explain .word .split {
+  main .explain > div .word .split {
     text-align: center;
+    margin: 0 auto 10px;
   }
-  main .explain .word .string {
+  main .explain > div .word .string {
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
     font-size: 14px;
     white-space: pre-line;
     line-height: 1.3;
   }
-  main .explain .word .string b {
+  main .explain > div .word .string b {
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
+    line-height: 1.7;
   }
-  main .explain .btn .more {
+  main .explain .btn .open {
     width: 100%;
     padding: 3px 0 5px;
     font-size: 20px;
@@ -129,26 +137,29 @@
   }
   main .qna {
     width: 100%;
-    margin: 60px auto;
+    margin: 0 auto 60px;
   }
-  main .qna div {
+  main .qna > article {
     display: flex;
     justify-content: space-between;
     align-items: center;
     vertical-align: top;
     padding-bottom: 10px;
   }
-  main .qna div .h5 {
+  main .qna > article .h5 {
     width: 50%;
     padding: 0;
   }
-  main .qna div .string {
+  main .qna > article .more-btn {
     width: 50%;
     font-size: 14px;
     text-align: right;
-    transition: 0.5s;
     overflow: hidden;
     position: relative;
+    transition: 0.5s;
+  }
+  main .qna > article .more-btn > a {
+    color: #262626;
   }
   main .qna .box02 ul li {
     width: 100%;
