@@ -77,7 +77,7 @@
 .slide .slick-dots li button{
     width: 8px; height: 8px;
     padding: 0; 
-    background-color: rgba(0, 64, 50, 0.6);
+    background-color: rgba(0, 64, 50, 0.3);
     border-radius: 50%;
     display: inline-block;
     border:none;
