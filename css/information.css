@@ -19,14 +19,34 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    overflow: hidden;
   }
   main .contain .h3 {
     width: 50%;
     padding-bottom: 5px;
     text-align: center;
+    transition: 0.5s;
   }
   main .contain .h3.active {
     border-bottom: 2px solid #004032;
+    -webkit-animation: line 0.5s linear;
+            animation: line 0.5s linear;
+  }
+  @-webkit-keyframes line {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes line {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
   main .object {
     width: 100%;
@@ -51,6 +71,9 @@
   main .object .work li.active {
     background-color: #FFDD78;
   }
+  main .object .work.active li {
+    display: flex;
+  }
   main .object .protect {
     width: 100%;
     display: flex;
@@ -71,6 +94,9 @@
   main .object .protect li.active {
     background-color: #FFDD78;
   }
+  main .object .protect.active li {
+    display: flex;
+  }
   main .explain {
     width: 100%;
     margin: 0 auto 60px;
@@ -79,7 +105,6 @@
   }
   main .explain > div {
     width: 100%;
-    height: 500px;
     overflow: hidden;
   }
   main .explain > div .word {
