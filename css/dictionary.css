@@ -69,6 +69,7 @@
     font-size: 0.8em;
     word-wrap: wrap;
   }
+<<<<<<< Updated upstream
   main > .wl > ul > li > .ex.plus {
     display: block;
   }
@@ -81,4 +82,6 @@
     background-color: #F4F1DE;
     padding: 7px 0;
   }
+=======
+>>>>>>> Stashed changes
 }/*# sourceMappingURL=dictionary.css.map */
