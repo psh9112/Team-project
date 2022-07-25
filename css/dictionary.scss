@@ -32,7 +32,7 @@
         }
 
         >.wl {
-            margin-top: 60px;
+            margin-top: 40px;
             width: 100%;
 
             >ul {
@@ -68,7 +68,7 @@
                     }
 
                     >.ex {
-                        // display:none;
+                        display:none;
                         margin: 0 0 15px;
                         width: 90%;
                         background-color: #F4F1DE;
@@ -78,10 +78,22 @@
                             font-size: 0.8em;
                             word-wrap: wrap;
                         }
-
+                        &.plus{
+                            display:block;
+                        }
                     }
+                    
                 }
 
+            }
+            >.more{
+                width:80%;
+                margin:0 auto;
+                text-align:center;
+                font-size:0.9em;
+                font-weight:bold;
+                background-color: #F4F1DE;
+                padding:7px 0;
             }
         }
     }
