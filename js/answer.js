@@ -1,26 +1,104 @@
-async function data(dataUrl){
-    
+
+
+async function data(dataUrl) {
+
     let d = await fetch(dataUrl);
     let e = await d.json();
-    
+
     return e;
 
 }
 
-let exec = async ()=>{
-    qna1( await data('./api/law_QnA1.json') );
-    qna2( await data('./api/law_QnA2.json') );
+let exec = async () => {
+    qna1(await data('./api/law_QnA1.json'));
+    qna2(await data('./api/law_QnA2.json'));
 }
 exec();
 
-function qna1(data){
-    console.log(data)
+
+let elBox1 = document.querySelector('.qna .box01 > ul');
+
+function qna1(data) {
+
+    data.item.forEach(function (v) {
+        try {
+            if (v.question.cdata.match('연차수당')) {
+                elBox1 += `<li>
+                <div class="container">
+                    <p class="question">Q. ${v.question.cdata}</p>
+                    <p class="plus"><span></span><span></span></p>
+                </div>
+                <div class="answer">${v.answer.cdata}</div>
+            </li>
+                `;
+            }
+        } catch { }
+
+    })
+
 }
 
 
-function qna2(data){
-    console.log(data)
+function qna2(data) {
+console.log(data);
 }
+
+
+function openFun() {
+    const elPlus = document.querySelectorAll('.box01 > ul > li .container .plus > button');
+    const elAnswer = document.querySelectorAll('.box01 > ul > li .answer');
+
+    let val = 0;
+    elPlus.forEach(function (el, key) {
+        el.addEventListener('click', function () {
+
+            elPlus[key].classList.add('active');
+            elPlus[val].classList.remove('active');
+
+            elAnswer[key].classList.add('active');
+            elAnswer[val].classList.remove('active');
+
+            val = key;
+
+        });
+
+    });
+
+
+};//openFun end
+
+console.log(openFun());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 fetch('data3.json')
@@ -41,23 +119,6 @@ fetch('./api/law_QnA1.json')
 
         const elQna = document.querySelector('.box01 > ul');
 
-        function sortDcd() { //내림차순
-            realData.product.sort(function (a, b) {
-                if (a.price < b.price) return 1;
-                if (a.price > b.price) return -1;
-                return 0;
-            });
-            printFun();
-        };
-
-        function sortAcd() { //오름차순
-            realData.product.sort(function (a, b) {
-                if (a.price > b.price) return 1;
-                if (a.price < b.price) return -1;
-                return 0;
-            });
-            printFun();
-        };
 
         function printFun() {
 
@@ -88,8 +149,6 @@ fetch('./api/law_QnA1.json')
 
         const btn = document.querySelectorAll('button');
 
-        btn[0].addEventListener('click', sortAcd);
-        btn[1].addEventListener('click', sortDcd);
-
-
     }); */
+
+

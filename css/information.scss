@@ -29,21 +29,17 @@
                 width: 50%;
                 padding-bottom: 5px;
                 text-align: center;
-                transition: .5s;
-                
-                &.active {
+
+
+                &.active::after {
+                    content: '';
+                    clear: both;
+                    width: 100%;
                     border-bottom: 2px solid #004032;
-                    animation: line .5s linear;
+                    transition: .5s;
+                    overflow: hidden;
                 }
 
-                @keyframes line{
-                    0%{
-                        transform: translateX(-100%);
-                    }
-                    100%{
-                        transform: translateX(0%);
-                    }
-                }
             }
         }
 
@@ -57,7 +53,6 @@
                 justify-content: left;
                 flex-wrap: wrap;
                 overflow: hidden;
-                // display: none;
 
                 li {
                     display: inline-block;
@@ -72,13 +67,11 @@
                         background-color: #FFDD78;
                     }
                 }
-            
-                &.active{
-                    li{
-                        display: flex;
-                    }
+
+                &.active {
+                    display: flex;
                 }
-            
+
             }
 
             .protect {
@@ -103,10 +96,8 @@
                     }
                 }
 
-                &.active{
-                    li{
-                        display: flex;
-                    }
+                &.active {
+                    display: flex;
                 }
             }
         }

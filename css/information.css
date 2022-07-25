@@ -25,28 +25,14 @@
     width: 50%;
     padding-bottom: 5px;
     text-align: center;
-    transition: 0.5s;
   }
-  main .contain .h3.active {
+  main .contain .h3.active::after {
+    content: "";
+    clear: both;
+    width: 100%;
     border-bottom: 2px solid #004032;
-    -webkit-animation: line 0.5s linear;
-            animation: line 0.5s linear;
-  }
-  @-webkit-keyframes line {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  @keyframes line {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
+    transition: 0.5s;
+    overflow: hidden;
   }
   main .object {
     width: 100%;
@@ -71,7 +57,7 @@
   main .object .work li.active {
     background-color: #FFDD78;
   }
-  main .object .work.active li {
+  main .object .work.active {
     display: flex;
   }
   main .object .protect {
@@ -94,7 +80,7 @@
   main .object .protect li.active {
     background-color: #FFDD78;
   }
-  main .object .protect.active li {
+  main .object .protect.active {
     display: flex;
   }
   main .explain {

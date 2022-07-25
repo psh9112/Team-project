@@ -4,10 +4,25 @@ $.ajax({
 
     success: function (infoData) {
 
+
+        function strFun(str, len) {
+
+            let realStr = '';
+
+            if (str.length > len) {
+                realStr = str.substring(0, len) + '...';
+            } else {
+                realStr = str;
+            }
+            return realStr;
+        }//strFun end
+
+
         let tag = '', title, smallword, info;
 
-        $('.object .work > li').on('click', function () {
+        $('.object > ul > li').on('click', function () {
             $(this).addClass('active');
+
 
             let liThis = $(this).text();
             let titThis;
@@ -19,6 +34,7 @@ $.ajax({
                 }
 
             });
+
         }); //click end
 
 
@@ -37,39 +53,22 @@ $.ajax({
 
             $('.explain >div').html(tag);
 
-        } //end
+            let txt = $('.contains .string').text().trim();
+            $('.contains .string').text(strFun(txt, 500));
 
 
-        function strFun(str, len) {
+        } printFun($(infoData).find('items').eq(0))
+        // printFun end
 
-            let realStr = '';
 
-            if (str.length > len) {
-                realStr = str.substring(0, len) + '...';
-            } else {
-                realStr = str;
-            }
-            return realStr;
-        }
-        let txt = $(this).find('info').text().trim();
-        console.log(txt.length);
-        $('.word .strimg').text(strFun(txt, 50));
-        //end
+        $('.explain .btn').on('click', function () {
+            printFun();
+            $('.contains .string').text();
+        });
 
-        
+
+
+
+
     }//ajax-success.end
 });
-
-
-
-// $('.contain >p').on('click', function (i, v) {
-
-//     if ($(this).eq(v) = "임대차보호법") {
-//         $('.object .protect')
-//         console.log()
-//     }
-
-
-// });
-
-
