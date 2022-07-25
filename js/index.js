@@ -1,5 +1,29 @@
 
 $.ajax({
+    url: './api/worddictionary.json',
+    success: function (num) {
+        let ranNum = Math.floor(Math.random() * 1000);
+        let word = '';
+        let mean = '';
+
+        console.log(num.data[ranNum]);
+
+        $.each(num.data, function (i, v) {
+            if (i == ranNum) {
+                word = `${num.data[i].용어명}`;
+                mean = `${num.data[i].설명}`;
+                
+                $('.todayWord p').html(word);
+                $('.wordEx').html(mean);
+            }
+        })
+
+
+    }
+})
+
+
+$.ajax({
     url: './api/youtube_video.json',
     success: function (data) {
         let source = '';
