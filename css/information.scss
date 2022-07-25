@@ -26,18 +26,13 @@
             overflow: hidden;
 
             .h3 {
-                width: 50%;
+                width: 45%;
                 padding-bottom: 5px;
                 text-align: center;
 
 
-                &.active::after {
-                    content: '';
-                    clear: both;
-                    width: 100%;
+                &.active {
                     border-bottom: 2px solid #004032;
-                    transition: .5s;
-                    overflow: hidden;
                 }
 
             }
@@ -53,6 +48,7 @@
                 justify-content: left;
                 flex-wrap: wrap;
                 overflow: hidden;
+                display: none;
 
                 li {
                     display: inline-block;

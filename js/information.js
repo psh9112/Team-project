@@ -4,6 +4,8 @@ $.ajax({
 
     success: function (infoData) {
 
+        selectFun();
+
 
         function strFun(str, len) {
 
@@ -16,6 +18,7 @@ $.ajax({
             }
             return realStr;
         }//strFun end
+
 
 
         let tag = '', title, smallword, info;
@@ -37,7 +40,10 @@ $.ajax({
 
         }); //click end
 
-
+        $('.explain .btn').on('click', function () {
+            printFun();
+            $('.contains .string').text(txt);
+        });
 
         function printFun(data) {
             title = data.find('title').html()
@@ -61,14 +67,47 @@ $.ajax({
         // printFun end
 
 
-        $('.explain .btn').on('click', function () {
-            printFun();
-            $('.contains .string').text();
-        });
-
-
-
-
 
     }//ajax-success.end
 });
+
+
+function selectFun() {
+
+    const elBtns = document.querySelectorAll('.contain p');
+    const elTabs = document.querySelectorAll('.object > ul');
+    const elList = document.querySelectorAll('.object > ul > li');
+    const elEx = document.querySelectorAll('.contains .word');
+
+    let idx = 0, val = 0;
+
+    elBtns.forEach(function (el, key) {
+        el.addEventListener('click', function () {
+
+            elBtns[idx].classList.remove('active');
+            elBtns[key].classList.add('active');
+
+            elTabs[idx].classList.remove('active');
+            elTabs[key].classList.add('active');
+
+            idx = key;
+
+        });
+    });
+
+    elList.forEach(function (v, k) {
+
+        v.addEventListener('click', function () {
+
+            elList[val].classList.remove('active');
+            elList[k].classList.add('active');
+
+            val = k;
+
+        });
+
+    });
+
+
+
+}; //selectFun end

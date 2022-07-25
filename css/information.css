@@ -22,17 +22,12 @@
     overflow: hidden;
   }
   main .contain .h3 {
-    width: 50%;
+    width: 45%;
     padding-bottom: 5px;
     text-align: center;
   }
-  main .contain .h3.active::after {
-    content: "";
-    clear: both;
-    width: 100%;
+  main .contain .h3.active {
     border-bottom: 2px solid #004032;
-    transition: 0.5s;
-    overflow: hidden;
   }
   main .object {
     width: 100%;
@@ -44,6 +39,7 @@
     justify-content: left;
     flex-wrap: wrap;
     overflow: hidden;
+    display: none;
   }
   main .object .work li {
     display: inline-block;

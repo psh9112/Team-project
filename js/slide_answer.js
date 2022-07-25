@@ -9,7 +9,7 @@ $(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 8000,
+      autoplaySpeed: 3000,
       arrows: true,
       draggable: true,
       easing: 'linear',
