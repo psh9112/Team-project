@@ -16,58 +16,82 @@ let exec = async () => {
 exec();
 
 
-let elBox1 = document.querySelector('.qna .box01 > ul');
-
 function qna1(data) {
-
+    let elBox1 = document.querySelector('.qna .box01 > ul');
+    let elData;
     data.item.forEach(function (v) {
         try {
-            if (v.question.cdata.match('연차수당')) {
-                elBox1 += `<li>
+            if (v.question.cdata.match('건물의 소유')) {
+                elData = `<li>
                 <div class="container">
                     <p class="question">Q. ${v.question.cdata}</p>
-                    <p class="plus"><span></span><span></span></p>
+                    <p class="plus">
+                    <button><span></span><span></span></button>
+                    </p>
                 </div>
                 <div class="answer">${v.answer.cdata}</div>
             </li>
                 `;
+                // console.log(elData);
+                elBox1.innerHTML += elData;
+            }
+        } catch { }
+        openFun();
+
+    })
+} //qna1 end
+
+function qna2(data) {
+    let elBox1 = document.querySelector('.qna .box01 > ul');
+    let elData;
+    data.item.forEach(function (v) {
+        try {
+            if (v.question.cdata.match('건물의 소유')) {
+                elData = `<li>
+                <div class="container">
+                    <p class="question">Q. ${v.question.cdata}</p>
+                    <p class="plus">
+                    <button"><span></span><span></span></button>
+                    </p>
+                </div>
+                <div class="answer">${v.answer.cdata}</div>
+            </li>
+                `;
+                // console.log(elData);
+                elBox1.innerHTML += elData;
             }
         } catch { }
 
+        openFun();
     })
-
-}
-
-
-function qna2(data) {
-console.log(data);
-}
+} //qna2 end
 
 
 function openFun() {
-    const elPlus = document.querySelectorAll('.box01 > ul > li .container .plus > button');
-    const elAnswer = document.querySelectorAll('.box01 > ul > li .answer');
+
+    const elPlus = document.querySelectorAll('.qna .box01 > ul > li .container .plus > button');
+    const elAnswer = document.querySelectorAll('.qna .box01 > ul > li .answer');
 
     let val = 0;
     elPlus.forEach(function (el, key) {
         el.addEventListener('click', function () {
-
-            elPlus[key].classList.add('active');
-            elPlus[val].classList.remove('active');
-
-            elAnswer[key].classList.add('active');
-            elAnswer[val].classList.remove('active');
+            if(!this.classList.contains('active')){
+                elPlus[val].classList.remove('active');
+                elPlus[key].classList.add('active');
+    
+                elAnswer[val].classList.remove('active');
+                elAnswer[key].classList.add('active');
+            }else{
+                elPlus[val].classList.remove('active');
+                elAnswer[val].classList.remove('active');
+            }
 
             val = key;
 
         });
-
     });
-
-
+    
 };//openFun end
-
-console.log(openFun());
 
 
 
