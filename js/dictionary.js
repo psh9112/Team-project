@@ -18,7 +18,10 @@ $.ajax({
             result += `<li>
                         <div class="word">
                             <p>${value.용어명}</p>
-                            <span>+</span>
+                            <div class="du"> 
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
                         <div class="ex">
                             <p>${value.설명}</p>
@@ -31,6 +34,8 @@ $.ajax({
         $('li > .word').on('click', function () {
             $('li > .ex').removeClass('plus');
             $(this).next().addClass('plus');
+            $('.word').find('span:eq(1)').removeClass('on');
+            $(this).find('span:eq(1)').addClass('on');
         })
 
         $('.wl > .more').on('click', function () {
@@ -38,7 +43,6 @@ $.ajax({
             $('.wl > ul').append(list[count]);
 
             $('li > .word').on('click', function () {
-                console.log(0);
                 $('li > .ex').removeClass('plus');
                 $(this).next().addClass('plus');
             })

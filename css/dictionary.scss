@@ -57,14 +57,40 @@
                         padding: 10px 0;
 
                         >p {
+                            width:90%;
                             padding-top: 2px;
                             font-size: 1em;
                             color: black;
                         }
+                        >.du{
+                            width:10%; height:1em;
+                            padding-top:2px;
+                            // border:1px solid black;
+                            position:relative;
 
-                        >span {
-                            font-size: 1.3em;
+                            >span{
+                                opacity:100%;
+                                transition:0.5s;
+                            }
+                            >span.on{
+                                opacity:0;
+                            }
+
+                            >span:nth-of-type(1) {
+                                width:15px; height:2px;
+                                background-color: black;
+                                position:absolute;
+                                left:40%; top:60%;
+                            }
+                            >span:nth-of-type(2) {
+                                width:15px; height:2px;
+                                background-color: black;
+                                transform:rotate(90deg);
+                                position:absolute;
+                                left:40%; top:60%;
+                            }
                         }
+                        
                     }
 
                     >.ex {
