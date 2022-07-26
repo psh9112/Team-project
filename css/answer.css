@@ -2,7 +2,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   main {
     width: 90%;
-    margin: 40px auto;
+    margin: 140px auto;
   }
   main .topbtn {
     position: fixed;
@@ -15,7 +15,7 @@
   }
   main .search {
     width: 80%;
-    margin: 0 auto 60px;
+    margin: 20px auto 60px;
   }
   main .search p {
     position: relative;
@@ -29,9 +29,14 @@
     padding: 5px;
     border: none;
     outline: none;
-    font-size: 1.2em;
+    font-size: 0.95em;
   }
-  main .search p img {
+  main .search p > button {
+    border: none;
+    outline: none;
+    background: none;
+  }
+  main .search p > button img {
     width: 100%;
     position: absolute;
     right: 8%;
@@ -52,9 +57,6 @@
     width: 50%;
     padding-bottom: 10px;
   }
-  main .qna > article > p {
-    font-size: 14px;
-  }
   main .qna .box01 ul li {
     width: 100%;
     padding: 10px;
@@ -70,7 +72,14 @@
   }
   main .qna .box01 ul li .container .question {
     width: 90%;
-    font-size: 1em;
+  }
+  main .qna .box01 ul li .container .question > b {
+    color: #262626;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  main .qna .box01 ul li .container .question > span {
+    font-size: 0.9em;
   }
   main .qna .box01 ul li .container .plus {
     width: 20px;
@@ -99,14 +108,21 @@
     transform: rotate(90deg);
   }
   main .qna .box01 ul li .container .plus button.active span:nth-of-type(2) {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
   main .qna .box01 ul li .answer {
     width: 100%;
     padding: 15px 10px;
     background-color: #F4F1DE;
-    font-size: 0.8em;
     display: none;
+  }
+  main .qna .box01 ul li .answer > b {
+    color: rgb(212, 4, 4);
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  main .qna .box01 ul li .answer > span {
+    font-size: 0.8em;
   }
   main .qna .box01 ul li .answer.active {
     display: block;

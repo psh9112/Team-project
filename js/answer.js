@@ -1,107 +1,93 @@
 
 
-async function data(dataUrl) {
+function init(){
+    let data;
 
-    let d = await fetch(dataUrl);
-    let e = await d.json();
+    async function dataFn(u1,u2) {        
+        let a = await fetch(u1);
+        let b = await a.json();
+        let c = await fetch(u2);
+        let d = await c.json();
+        data  = await b.item.concat(d.item);
+        
+        list('근로계약서');
+    }
+    dataFn('./api/law_QnA1.json','./api/law_QnA2.json');
 
-    return e;
-
-}
-
-let exec = async () => {
-    qna1(await data('./api/law_QnA1.json'));
-    qna2(await data('./api/law_QnA2.json'));
-}
-exec();
-
-
-function qna1(data) {
-    let elBox1 = document.querySelector('.qna .box01 > ul');
-    let elData;
-    data.item.forEach(function (v) {
-        try {
-            if (v.question.cdata.match('건물의 소유')) {
-                elData = `<li>
-                <div class="container">
-                    <p class="question">Q. ${v.question.cdata}</p>
-                    <p class="plus">
-                    <button><span></span><span></span></button>
-                    </p>
-                </div>
-                <div class="answer">${v.answer.cdata}</div>
-            </li>
-                `;
-                // console.log(elData);
-                elBox1.innerHTML += elData;
-            }
-        } catch { }
-        openFun();
-
-    })
-} //qna1 end
-
-function qna2(data) {
-    let elBox1 = document.querySelector('.qna .box01 > ul');
-    let elData;
-    data.item.forEach(function (v) {
-        try {
-            if (v.question.cdata.match('건물의 소유')) {
-                elData = `<li>
-                <div class="container">
-                    <p class="question">Q. ${v.question.cdata}</p>
-                    <p class="plus">
-                    <button"><span></span><span></span></button>
-                    </p>
-                </div>
-                <div class="answer">${v.answer.cdata}</div>
-            </li>
-                `;
-                // console.log(elData);
-                elBox1.innerHTML += elData;
-            }
-        } catch { }
-
-        openFun();
-    })
-} //qna2 end
-
-
-function openFun() {
-
-    const elPlus = document.querySelectorAll('.qna .box01 > ul > li .container .plus > button');
-    const elAnswer = document.querySelectorAll('.qna .box01 > ul > li .answer');
-
-    let val = 0;
-    elPlus.forEach(function (el, key) {
-        el.addEventListener('click', function () {
-            if(!this.classList.contains('active')){
-                elPlus[val].classList.remove('active');
-                elPlus[key].classList.add('active');
     
-                elAnswer[val].classList.remove('active');
-                elAnswer[key].classList.add('active');
-            }else{
-                elPlus[val].classList.remove('active');
-                elAnswer[val].classList.remove('active');
-            }
+    function list(param){
+        //data print 
+        let elBox1 = document.querySelector('.qna .box01 > ul');
+        let elData = '';
+        data.forEach(function (v) {
+            try {
+                if (v.question.cdata.match(param)) {
+                    elData += `<li>
+                    <div class="container">
+                        <p class="question">
+                            <b>Q.</b>
+                            <span>${v.question.cdata}</span>
+                        </p>
+                        <p class="plus">
+                            <button><span></span><span></span></button>
+                        </p>
+                    </div>
+                    <div class="answer">
+                        <b>A.</b>
+                        <span>${v.answer.cdata}</span>
+                    </div>
+                </li>`;
+                }
+            } catch { }
 
-            val = key;
+        })
 
+        elBox1.innerHTML = elData;
+        openFun();
+    }
+    
+
+    function openFun() {
+        //list open
+        const elPlus = document.querySelectorAll('.qna .box01 > ul > li .container .plus > button');
+        const elAnswer = document.querySelectorAll('.qna .box01 > ul > li .answer');
+
+        let val = 0;
+        elPlus.forEach(function (el, key) {
+            el.addEventListener('click', function () {
+
+                if (!this.classList.contains('active')) {
+                    elPlus[val].classList.remove('active');
+                    elPlus[key].classList.add('active');
+
+                    elAnswer[val].classList.remove('active');
+                    elAnswer[key].classList.add('active');
+                    console.log('open')
+                } else {
+                    elPlus[val].classList.remove('active');
+                    elAnswer[val].classList.remove('active');
+                    console.log('close')
+                }
+
+                val = key;
+
+            });
         });
-    });
+
+    };//openFun end
+
+
+    //search btn
+    const elShow = document.querySelector('.search > p > button');
+    const elSearch = document.querySelector('.search > p > input');
     
-};//openFun end
+    elShow.addEventListener('click',function(){
+        console.log(elSearch.value)
+        list(elSearch.value);
+    })
 
-
-
-
-
-
-
-
-
-
+}
+window.addEventListener('load',init);
 
 
 

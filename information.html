@@ -82,7 +82,6 @@
             </div>
             <p class="btn">
                 <button class="open active">▼</button>
-                <button class="exit">▲</button>
             </p>
         </section>
 
@@ -91,14 +90,22 @@
                 <h3 class="h5">관련질문</h3>
                 <p class="more-btn"><a href="./answer.html">더보기＋</a></p>
             </article>
-            <div class="box02">
+            <div class="box01">
                 <ul>
                     <!-- <li>
                         <div class="container">
-                            <p class="question">Q.</p>
-                            <p class="plus"><span></span><span></span></p>
+                            <p class="question">
+                                <b>Q.</b>
+                                <span>${v.question.cdata}</span>
+                            </p>
+                            <p class="plus">
+                                <button><span></span><span></span></button>
+                            </p>
                         </div>
-                        <div class="answer"></div>
+                        <div class="answer">
+                            <b>A.</b>
+                            <span>${v.answer.cdata}</span>
+                        </div>
                     </li> -->
                 </ul>
             </div>

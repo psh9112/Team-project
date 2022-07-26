@@ -25,25 +25,33 @@
             <img src="./img/top.png">
         </div>
         <div class="search">
-            <p><input type="text" required><img src="./img/icon/search.svg" style="width: 25px;"></p>
+            <p>
+                <input type="text" name="search">
+                <button><img src="./img/icon/search.svg" style="width: 25px;"></button>
+            </p>
         </div>
 
         <div class="qna">
             <article>
                 <h3 class="h5">Q&A</h3>
-                <!-- <p>더보기＋</p> -->
             </article>
 
             <div class="box01">
                 <ul>
                     <!-- <li>
                         <div class="container">
-                            <p class="question">Q.</p>
+                            <p class="question">
+                                <b>Q.</b>
+                                <span>${v.question.cdata}</span>
+                            </p>
                             <p class="plus">
                                 <button><span></span><span></span></button>
                             </p>
                         </div>
-                        <div class="answer"></div>
+                        <div class="answer">
+                            <b>A.</b>
+                            <span>${v.answer.cdata}</span>
+                        </div>
                     </li> -->
                 </ul>
             </div>
