@@ -49,8 +49,8 @@ function init(){
 
     function openFun() {
         //list open
-        const elPlus = document.querySelectorAll('.qna .box01 > ul > li .container .plus > button');
-        const elAnswer = document.querySelectorAll('.qna .box01 > ul > li .answer');
+        const elPlus = document.querySelectorAll('.container .plus > button');
+        const elAnswer = document.querySelectorAll('.box01 .answer');
 
         let val = 0;
         elPlus.forEach(function (el, key) {
@@ -80,7 +80,6 @@ function init(){
     //search btn
     const elShow = document.querySelector('.search > p > button');
     const elSearch = document.querySelector('.search > p > input');
-    
     elShow.addEventListener('click',function(){
         console.log(elSearch.value)
         list(elSearch.value);

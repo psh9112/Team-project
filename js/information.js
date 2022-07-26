@@ -83,7 +83,7 @@ $.ajax({
     }
 }); //ajax-success.end
 
-function init(){
+
 const elBtn1 = document.querySelector('.contain p:nth-of-type(1)');
 const elBtn2 = document.querySelector('.contain p:nth-of-type(2)');
 const elBtns = document.querySelectorAll('.contain p');
@@ -207,7 +207,3 @@ function openFun() {
     });
 
 };//openFun end
-
-
-} //init end
-window.addEventListener('load',init);
