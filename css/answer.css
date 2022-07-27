@@ -10,7 +10,10 @@
     bottom: 5%;
     z-index: 1;
   }
-  main .topbtn img {
+  main .topbtn a {
+    display: inline-block;
+  }
+  main .topbtn a img {
     width: 100%;
   }
   main .search {

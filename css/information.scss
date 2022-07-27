@@ -12,8 +12,11 @@
             bottom: 5%;
             z-index: 1;
 
-            img {
-                width: 100%;
+            a {
+                display: inline-block;
+                img {
+                    width: 100%;
+                }
             }
         }
 
