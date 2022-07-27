@@ -58,7 +58,7 @@ function init() {
         elBox1.innerHTML = elList[0];
 
         //numbtn
-        let idx = 0;
+        let idx = 0, next = 0, prev = 0;
         elNum1.forEach(function (e, key) {
             e.addEventListener('click', function () {
                 if (!this.classList.contains('active')) {
@@ -73,19 +73,32 @@ function init() {
                 elBox1.innerHTML = elList[val];
                 openFun();
             });
+            //next btn
         });
 
+        elNum1.forEach(function (e, key) {
+            elNext.addEventListener('click', function () {
+                elNum1[idx].classList.remove('active');
+                elNum1[key].classList.add('active');
+
+                idx = key;
+
+                let val = Number(this.textContent);
+                elBox1.innerHTML = elList[val]++;
+                openFun();
+            });
+
+        });
         openFun();
 
     }; //list end
 
-    /*
-    //next btn
-    elNext.addEventListener('click', function () {});
-    
-    //preview btn
-    elPrev.addEventListener('click', function () {});
-    */
+
+    // //preview btn
+    // elPrev.addEventListener('click', function () { });
+
+
+
 
     function openFun() {
         //list open
