@@ -138,41 +138,6 @@ a {
     }
 
 
-
-    .tab {
-        width: 100%;
-        background-color: #004032;
-        display: flex;
-        padding: 30px 0 0;
-    }
-
-    .tab .sub {
-        width: 95%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-    }
-
-
-    .tab .sub>a {
-        font-family: 'Do Hyeon', sans-serif;
-        color: white;
-        font-size: 1.1em;
-        letter-spacing: -8%;
-    }
-
-
-    .tab .sub>span {
-        margin-top: 5px;
-        height: 0.8em;
-        width: 2px;
-        background-color: white;
-    }
-
-
-
-
-
     .popup {
         display: none;
         transition: 0.5s;
