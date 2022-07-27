@@ -1,0 +1,20 @@
+{
+    "url":[
+        {"index":"../index.html",
+        "answer":"../answer.html",
+        "dictionary":"../dictionary.html",
+        "information":"../information.html",
+        "search":"../search.html"}
+    ],
+    "object":[
+        {"근로기준":"document.querySelectorAll('.object > .work > li)[0]"},
+        {"최저임금":"document.querySelectorAll('.object > .work > li)[1]"},
+        {"퇴직급여":"document.querySelectorAll('.object > .work > li)[2]"},
+        {"고용보험":"document.querySelectorAll('.object > .work > li)[3]"},
+        {"산재보험":"document.querySelectorAll('.object > .work > li)[4]"},
+        {"행정소송":"document.querySelectorAll('.object > .work > li)[7]"},
+        {"민사소송":"document.querySelectorAll('.object > .work > li)[8]"},
+        {"민사소송":"document.querySelectorAll('.object > .protect > li)[1]"},
+        {"민사소송":"document.querySelectorAll('.object > .work > li)[0]"}
+    ]
+}

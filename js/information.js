@@ -6,7 +6,7 @@ $.ajax({
 
         selectFun();
 
-        //글자수 제한
+
         function strFun(str, len) {
 
             let realStr = '';
@@ -22,12 +22,25 @@ $.ajax({
 
 
         let tag = '', title, smallword, info;
-        // 리스트 클릭 
+
         $('.object > ul > li').on('click', function () {
-            $(this).addClass('active');
+            $('.object > ul > li')[0].removeClass('active');
+            exe($(this));
+        });
+
+        $('.object > ul > li').each(function(){
+            if($(this).text() == localStorage.name+'법'){
+                exe($(this));
+            }
+        });      
+        
+
+        function exe(_this){
+            console.log(_this)
+            _this.addClass('active');
 
 
-            let liThis = $(this).text();
+            let liThis = _this.text();
             let titThis;
 
             $(infoData).find('items').each(function (i) {
@@ -37,8 +50,12 @@ $.ajax({
                 }
 
             });
+        }
 
-        }); //click end
+        $('.explain .btn').on('click', function () {
+            printFun();
+            $('.contains .string').text(txt);
+        });
 
         function printFun(data) {
             title = data.find('title').html()
@@ -57,42 +74,22 @@ $.ajax({
             let txt = $('.contains .string').text().trim();
             $('.contains .string').text(strFun(txt, 500));
 
-        } // printFun end
-        printFun($(infoData).find('items').eq(0));
 
-        elBtn1.addEventListener('click', function () {
-            printFun($(infoData).find('items').eq(0));
-        });
-
-        elBtn2.addEventListener('click', function () {
-            printFun($(infoData).find('items').eq(18));
-        });
+        } printFun($(infoData).find('items').eq(0))
+        // printFun end
 
 
-        // 더보기 버튼
-        $('.explain .btn').on('click', function () {
-            $(this).toggleClass('active');
-            $('.contains .string').text(txt);
 
-            if (!$(this).hasClass('active')) {
-                $('.contains .string').text(txt, 500);
-            }
-        });
+    }//ajax-success.end
+});
 
 
-    }
-}); //ajax-success.end
-
-
-const elBtn1 = document.querySelector('.contain p:nth-of-type(1)');
-const elBtn2 = document.querySelector('.contain p:nth-of-type(2)');
-const elBtns = document.querySelectorAll('.contain p');
-const elTabs = document.querySelectorAll('.object > ul');
-const elList = document.querySelectorAll('.object > ul > li');
-const elEx = document.querySelectorAll('.contains .word');
-
-//텝 클릭 시 값 변환
 function selectFun() {
+
+    const elBtns = document.querySelectorAll('.contain p');
+    const elTabs = document.querySelectorAll('.object > ul');
+    const elList = document.querySelectorAll('.object > ul > li');
+    const elEx = document.querySelectorAll('.contains .word');
 
     let idx = 0, val = 0;
 
@@ -126,83 +123,3 @@ function selectFun() {
 
 
 }; //selectFun end
-
-
-
-//QnA 데이터 불러오기
-let data;
-
-async function dataFn(u1, u2) {
-    let a = await fetch(u1);
-    let b = await a.json();
-    let c = await fetch(u2);
-    let d = await c.json();
-    data = await b.item.concat(d.item);
-
-    list('근로기준');
-}
-dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
-
-//불러온 데이터 출력
-function list(param) {
-    //data print 
-    let elBox1 = document.querySelector('.qna .box01 > ul');
-    let elData = '', list=[];
-
-    data.forEach(function (v,k) {
-        try {
-            if (v.question.cdata.match(param)) {
-                elData += `<li>
-                <div class="container">
-                    <p class="question">
-                        <b>Q.</b>
-                        <span>${v.question.cdata}</span>
-                    </p>
-                    <p class="plus">
-                        <button><span></span><span></span></button>
-                    </p>
-                </div>
-                <div class="answer">
-                    <b>A.</b>
-                    <span>${v.answer.cdata}</span>
-                </div>
-            </li>`;
-            }
-        } catch { }
-    
-    })
-
-    elBox1.innerHTML = elData;
-    openFun();
-}
-
-
-//QnA open/close
-function openFun() {
-    //list open
-    const elPlus = document.querySelectorAll('.qna .box01 > ul > li .container .plus > button');
-    const elAnswer = document.querySelectorAll('.qna .box01 > ul > li .answer');
-
-    let val = 0;
-    elPlus.forEach(function (el, key) {
-        el.addEventListener('click', function () {
-
-            if (!this.classList.contains('active')) {
-                elPlus[val].classList.remove('active');
-                elPlus[key].classList.add('active');
-
-                elAnswer[val].classList.remove('active');
-                elAnswer[key].classList.add('active');
-                console.log('open')
-            } else {
-                elPlus[val].classList.remove('active');
-                elAnswer[val].classList.remove('active');
-                console.log('close')
-            }
-
-            val = key;
-
-        });
-    });
-
-};//openFun end
