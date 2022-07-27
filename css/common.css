@@ -72,25 +72,22 @@ a {
 @media (max-width:767px) {
     header {
         width: 100%;
+        /* height: 130px; */
         background-color: #004032;
-    }
-
-    .fixedH {
-        position: fixed;
-        left: 0;
-        top: 0;
+        position:fixed;
+        top:0; left:0;
         z-index: 100;
     }
 
     header>.all {
-        width: 100%;
-        padding: 20px;
+        width: 90%;
         margin: 0 auto;
         position: relative;
     }
 
 
     header>.all>.top {
+        padding: 20px 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -99,7 +96,7 @@ a {
     }
 
     header>.all>.top>.logo {
-        width: 80%;
+        width: 50%;
         display: flex;
         justify-content: space-between;
         vertical-align: center;
@@ -107,19 +104,23 @@ a {
     }
 
     header>.all>.top>.logo>a {
-        width: 100%;
-        /* height: 50px; */
-        font-family: 'Do Hyeon', sans-serif;
-        /* border:1px solid white; */
-        font-size: 1.2em;
-        color: white;
-        text-align: left;
-        /* font-weight:bold; */
+        width: 30%;
     }
 
     header>.all>.top>.logo>a>img {
-        width: 20%;
-        padding-right: 20px;
+        width: 100%;
+    }
+
+    header>.all>.top>.logo>p {
+        font-family: 'Do Hyeon', sans-serif;
+        width: 65%;
+        height: 50px;
+        /* border:1px solid white; */
+        font-size: 1.8em;
+        color: white;
+        text-align: center;
+        margin: auto;
+        /* font-weight:bold; */
     }
 
     header>.all>.top>.burger {
@@ -136,7 +137,6 @@ a {
         height: 4px;
         background-color: white;
     }
-
 
     .popup {
         display: none;

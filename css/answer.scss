@@ -5,7 +5,7 @@
 
     main {
         width: 90%;
-        margin: 200px auto;
+        margin: 170px auto 40px;
 
         .topbtn {
             position: fixed;
@@ -20,7 +20,7 @@
 
         .search {
             width: 80%;
-            margin: 20px auto 60px;
+            margin: 0 auto 80px;
 
             p {
                 position: relative;
@@ -34,39 +34,26 @@
                     padding: 5px;
                     border: none;
                     outline: none;
-                    font-size: 0.95em;
+                    font-size: 1.2em;
                 }
 
-                >button {
-                    border: none;
-                    outline: none;
-                    background: none;
-
-                    img {
-                        width: 100%;
-                        position: absolute;
-                        right: 8%;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
+                img {
+                    width: 100%;
+                    position: absolute;
+                    right: 8%;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
             }
         }
 
         .qna {
             width: 100%;
-            margin: 0 auto 60px;
+            margin: 40px auto 60px;
 
-            >article {
+            .h5 {
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .h5 {
-                    width: 50%;
-                    padding-bottom: 10px;
-                }
+                padding-bottom: 10px;
             }
 
             .box01 {
@@ -79,60 +66,32 @@
 
                         .container {
                             width: 100%;
-                            padding-bottom: 10px;
+                            margin-bottom: 10px;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
 
                             .question {
-                                width: 90%;
+                                width: 80%;
+                                font-size: 1em;
 
-                                >b {
-                                    color: #262626;
-                                    font-weight: bold;
-                                    font-size: 1.1em;
-                                }
+                                span:nth-of-type(1) {}
 
-                                >span {
-                                    font-size: 0.9em;
-                                }
+                                span:nth-of-type(2) {}
                             }
 
                             .plus {
-                                width: 20px;
-                                height: 20px;
-                                text-align: right;
-                                overflow: hidden;
-                                position: relative;
-
-                                button {
-                                    width: 100%;
-                                    border: none;
-                                    outline: none;
-                                    background: none;
-                                    transition: .5s;
-
-                                    span {
-                                        width: 100%;
-                                        border-top: 2px solid #262626;
-                                        position: absolute;
-                                        right: 5%;
-                                        top: 50%;
-                                        transform: translateY(-50%);
-                                        transition: .5s;
-                                    }
-
-                                    span:nth-of-type(2) {
-                                        transform: rotate(90deg);
-                                    }
-
-                                    &.active {
-                                        span:nth-of-type(2) {
-                                            transform: rotate(180deg);
-                                        }
-                                    }
-
+                                width: 10%;
+                                height: 30px;
+                                span{
+                                    width: 15px;
                                 }
+                                span:nth-of-type(1) {
+                                    width: 100%;
+                                    border-bottom: 2px solid #262626;
+                                }
+
+                                span:nth-of-type(2) {}
                             }
                         }
 
@@ -140,21 +99,8 @@
                             width: 100%;
                             padding: 15px 10px;
                             background-color: #F4F1DE;
+                            font-size: 0.8em;
                             display: none;
-
-                            >b {
-                                color: rgb(212, 4, 4);
-                                font-weight: bold;
-                                font-size: 1.1em;
-                            }
-
-                            >span {
-                                font-size: 0.8em;
-                            }
-
-                            &.active {
-                                display: block;
-                            }
                         }
                     }
                 }
@@ -165,24 +111,7 @@
                 margin: 20px auto;
                 text-align: center;
 
-                .num {
-                    width: 30px;
-                    height: 30px;
-                    display: inline-block;
-                    background: none;
-                    outline: none;
-                    border: 1px solid #ccc;
-                    border-radius: 10px;
-                    text-align: center;
-                    position: relative;
-
-                    &.active {
-                        color: #fff;
-                        background-color: #aaa;
-                    }
-                }
-
-                .img {
+                button {
                     width: 30px;
                     height: 30px;
                     display: inline-block;
@@ -202,31 +131,29 @@
                     }
                 }
             }
+        }
 
-            .play {
-                width: 100%;
-                margin: 0 auto;
-                overflow: hidden;
+        .play {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
 
-                .h5 {
-                    margin-bottom: 10px;
-                }
+            .h5 {
+                margin-bottom: 10px;
+            }
 
-                .video {
-                    li {
-                        iframe {
-                            width: 100%;
-                        }
+            .video {
+                li {
+                    iframe {
+                        width: 100%;
                     }
                 }
             }
         }
-
-
-
-
-
     }
+
+
+
 
 
 

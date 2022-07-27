@@ -2,7 +2,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   main {
     width: 90%;
-    margin: 200px auto;
+    margin: 170px auto 40px;
   }
   main .topbtn {
     position: fixed;
@@ -15,7 +15,7 @@
   }
   main .search {
     width: 80%;
-    margin: 20px auto 60px;
+    margin: 0 auto 80px;
   }
   main .search p {
     position: relative;
@@ -29,32 +29,22 @@
     padding: 5px;
     border: none;
     outline: none;
-    font-size: 0.95em;
+    font-size: 1.2em;
   }
-  main .search p > button {
-    border: none;
-    outline: none;
-    background: none;
-  }
-  main .search p > button img {
+  main .search p img {
     width: 100%;
     position: absolute;
     right: 8%;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   main .qna {
     width: 100%;
-    margin: 0 auto 60px;
+    margin: 40px auto 60px;
   }
-  main .qna > article {
+  main .qna .h5 {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  main .qna > article .h5 {
-    width: 50%;
     padding-bottom: 10px;
   }
   main .qna .box01 ul li {
@@ -65,74 +55,45 @@
   }
   main .qna .box01 ul li .container {
     width: 100%;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main .qna .box01 ul li .container .question {
-    width: 90%;
-  }
-  main .qna .box01 ul li .container .question > b {
-    color: #262626;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
-  main .qna .box01 ul li .container .question > span {
-    font-size: 0.9em;
+    width: 80%;
+    font-size: 1em;
   }
   main .qna .box01 ul li .container .plus {
-    width: 20px;
-    height: 20px;
-    text-align: right;
-    overflow: hidden;
-    position: relative;
+    width: 10%;
+    height: 30px;
   }
-  main .qna .box01 ul li .container .plus button {
+  main .qna .box01 ul li .container .plus span {
+    width: 15px;
+  }
+  main .qna .box01 ul li .container .plus span:nth-of-type(1) {
     width: 100%;
-    border: none;
-    outline: none;
-    background: none;
-    transition: 0.5s;
-  }
-  main .qna .box01 ul li .container .plus button span {
-    width: 100%;
-    border-top: 2px solid #262626;
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 0.5s;
-  }
-  main .qna .box01 ul li .container .plus button span:nth-of-type(2) {
-    transform: rotate(90deg);
-  }
-  main .qna .box01 ul li .container .plus button.active span:nth-of-type(2) {
-    transform: rotate(180deg);
+    border-bottom: 2px solid #262626;
   }
   main .qna .box01 ul li .answer {
     width: 100%;
     padding: 15px 10px;
     background-color: #F4F1DE;
-    display: none;
-  }
-  main .qna .box01 ul li .answer > b {
-    color: rgb(212, 4, 4);
-    font-weight: bold;
-    font-size: 1.1em;
-  }
-  main .qna .box01 ul li .answer > span {
     font-size: 0.8em;
-  }
-  main .qna .box01 ul li .answer.active {
-    display: block;
+    display: none;
   }
   main .qna .pagenum {
     width: 100%;
     margin: 20px auto;
     text-align: center;
   }
-  main .qna .pagenum .num {
+  main .qna .pagenum button {
     width: 30px;
     height: 30px;
     display: inline-block;
@@ -143,37 +104,24 @@
     text-align: center;
     position: relative;
   }
-  main .qna .pagenum .num.active {
-    color: #fff;
-    background-color: #aaa;
-  }
-  main .qna .pagenum .img {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    background: none;
-    outline: none;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-  }
-  main .qna .pagenum .img img {
+  main .qna .pagenum button img {
     width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
-  main .qna .play {
+  main .play {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
   }
-  main .qna .play .h5 {
+  main .play .h5 {
     margin-bottom: 10px;
   }
-  main .qna .play .video li iframe {
+  main .play .video li iframe {
     width: 100%;
   }
-}/*# sourceMappingURL=answer.css.map */
+}
+/*# sourceMappingURL=answer.css.map */
