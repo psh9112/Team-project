@@ -8,13 +8,13 @@ function head() {
     let scrolltop = '';
 
     $(document).on('scroll', function () {
-        scrollTop = $(document).scrollY;
+        scrolltop = $(document).scrollY;
 
         $('header').addClass('fixedH');
 
         $('.tab').css('padding-top', '130px');
         
-        if (scrollTop <= 100) {
+        if (scrolltop <= 100) {
             $('header').removeClass('fixedH');
             $('.tab').css('padding-top', '0px');
         }
@@ -61,9 +61,7 @@ text.forEach(function (el, idx) {
 	el.addEventListener('click', function () {
 		
 		localStorage.name = this.textContent;
-		location.replace('../information.html');
-
-		// elText += chu;
+		location.replace('./information.html');
 
 	})
 })
@@ -83,7 +81,7 @@ $.ajax({
                 word = `${num.data[i].용어명}`;
                 mean = `${num.data[i].설명}`;
                 
-                $('.todayWord p').html(word);
+                $('.todayWord b').html(word);
                 $('.wordEx').html(mean);
             }
         })
