@@ -28,7 +28,6 @@ $.ajax({
                         </div>
                     </li>`;
         })
-
         $('.wl > ul').html(list[0]);
 
         $('li > .word').on('click', function () {
@@ -45,6 +44,8 @@ $.ajax({
             $('li > .word').on('click', function () {
                 $('li > .ex').removeClass('plus');
                 $(this).next().addClass('plus');
+                $('.word').find('span:eq(1)').removeClass('on');
+                $(this).find('span:eq(1)').addClass('on');
             })
         })
     }
