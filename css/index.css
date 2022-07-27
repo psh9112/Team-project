@@ -11,36 +11,36 @@
     text-align: center;
   }
   main .section01 > .title {
+    width: 100%;
     font-family: "Do Hyeon", sans-serif;
     font-size: 2em;
     color: #004032;
     font-weight: bold;
   }
   main .section01 > .board {
+    width: 100%;
+    padding: 8px;
     margin: 30px auto 0;
-    height: 200px;
     border: 1px solid #cdcdcd;
     border-radius: 30px;
   }
   main .section01 > .board > .list {
     width: 95%;
     margin: 0 auto;
-    height: 100%;
   }
   main .section01 > .board > .list > ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     vertical-align: center;
     align-content: center;
-    padding: 10px 0;
   }
   main .section01 > .board > .list > ul > li {
     border-radius: 15px;
     width: 19%;
     padding: 10px 5px;
-    margin-top: 2%;
+    margin: 2% auto 1%;
     background-color: #cdcdcd;
   }
   main .section01 > .board > .list > ul > li > a {
@@ -57,18 +57,6 @@
     font-size: 0.8em;
     color: black;
   }
-  main .section01 > .board > .list > ul > li:nth-of-type(9) > a > p {
-    padding-top: 5px;
-    font-size: 0.7em;
-    white-space: pre-line;
-    line-height: 0.7em;
-  }
-  main .section01 > .board > .list > ul > li:nth-of-type(10) > a > p {
-    padding-top: 5px;
-    font-size: 0.7em;
-    white-space: pre-line;
-    line-height: 0.7em;
-  }
   main .section02 {
     width: 90%;
     height: -webkit-fit-content;
@@ -81,35 +69,37 @@
     background-color: #FFDD78;
   }
   main .section02 .box_01 {
+    width: 100%;
+    margin: 0 auto;
     position: relative;
   }
-  main .section02 .box_01 > p:nth-of-type(1) {
+  main .section02 .box_01 .today {
     margin-top: 20px;
     font-family: "Do Hyeon", sans-serif;
     color: #26439E;
     font-weight: bold;
   }
-  main .section02 .box_01 > .todayWord {
-    margin-top: 40px;
+  main .section02 .box_01 .todayWord {
+    margin-top: 50px;
     text-align: center;
-    position: relative;
   }
-  main .section02 .box_01 > .todayWord > span > b {
+  main .section02 .box_01 .todayWord > span > b {
     color: #004032;
     font-size: 1.8em;
     font-family: "Do Hyeon", sans-serif;
   }
-  main .section02 .box_01 > .todayWord > img {
-    width: 45%;
-    display: block;
+  main .section02 .box_01 .todayWord > img {
+    width: 40%;
     z-index: 10;
     position: absolute;
     left: 48%;
     top: 45%;
     transform: translate(-50%, -50%);
+    display: inline-block;
   }
   main .section02 .box_01 .wordEx {
-    margin-top: 40px;
+    width: 70%;
+    margin: 60px auto 0;
     padding-bottom: 30px;
     font-weight: bold;
     font-size: 0.9em;

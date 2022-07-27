@@ -14,13 +14,14 @@ function init() {
     }
     dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
 
+    
+    const elBox1 = document.querySelector('.qna .box01 > ul');
+    const elNum1 = document.querySelectorAll('.pagenum .num');
+    const elPrev = document.querySelector('.pagenum .img:nth-of-type(1)');
+    const elNext = document.querySelector('.pagenum .img:nth-of-type(2)');
 
     function list(param) {
         //data print 
-        const elBox1 = document.querySelector('.qna .box01 > ul');
-        const elNum1 = document.querySelectorAll('.pagenum .num');
-        const elPrev = document.querySelector('.pagenum .img:nth-of-type(1)');
-        const elNext = document.querySelector('.pagenum .img:nth-of-type(2)');
         let elData = [], elList = [], elPush = '';
         let idx = 0;
 
@@ -57,7 +58,7 @@ function init() {
         });
 
         elBox1.innerHTML = elList[0];
-
+        
         //numbtn
         elNum1.forEach(function (e, key) {
             e.addEventListener('click', function () {
@@ -75,21 +76,15 @@ function init() {
         });
 
         openFun();
-    };
+
+    }; //list end
 
     
-    let moveNum1 = 1--, moveNum2 = 1++;
     //next btn
-    elNext.addEventListener('click', function () {
-        let val = Number(elNum1[moveNum].textContent);
-        elBox1.innerHTML = elList[val];
-    });
+    elNext.addEventListener('click', function () {});
 
     //preview btn
-    elPrev.addEventListener('click', function () {
-        let val = Number(this.textContent);
-        elBox1.innerHTML = elList[val]; 
-    });
+    elPrev.addEventListener('click', function () {});
 
 
 

@@ -48,7 +48,7 @@ $.ajax({
                 word = `${num.data[i].용어명}`;
                 mean = `${num.data[i].설명}`;
                 
-                $('.todayWord p').html(word);
+                $('.todayWord b').html(word);
                 $('.wordEx').html(mean);
             }
         })

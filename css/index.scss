@@ -12,6 +12,7 @@
             text-align: center;
 
             >.title {
+                width: 100%;
                 font-family: 'Do Hyeon', sans-serif;
                 font-size: 2em;
                 color: #004032;
@@ -19,30 +20,29 @@
             }
 
             >.board {
+                width: 100%;
+                padding: 8px;
                 margin: 30px auto 0;
-                height: 200px;
                 border: 1px solid #cdcdcd;
                 border-radius: 30px;
 
                 >.list {
                     width: 95%;
                     margin: 0 auto;
-                    height: 100%;
 
                     >ul {
                         width: 100%;
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: space-around;
+                        justify-content: space-between;
                         vertical-align: center;
                         align-content: center;
-                        padding: 10px 0;
 
                         >li {
                             border-radius: 15px;
                             width: 19%;
                             padding: 10px 5px;
-                            margin-top: 2%;
+                            margin: 2% auto 1%;
                             background-color: #cdcdcd;
 
                             >a {
@@ -62,28 +62,6 @@
                                 }
                             }
                         }
-
-                        >li:nth-of-type(9) {
-                            >a {
-                                >p {
-                                    padding-top: 5px;
-                                    font-size: 0.7em;
-                                    white-space: pre-line;
-                                    line-height: 0.7em;
-                                }
-                            }
-                        }
-
-                        >li:nth-of-type(10) {
-                            >a {
-                                >p {
-                                    padding-top: 5px;
-                                    font-size: 0.7em;
-                                    white-space: pre-line;
-                                    line-height: 0.7em;
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -99,20 +77,20 @@
             background-color: #FFDD78;
 
             .box_01 {
+                width: 100%;
+                margin: 0 auto;
                 position: relative;
 
-                >p:nth-of-type(1) {
+                .today {
                     margin-top: 20px;
                     font-family: 'Do Hyeon', sans-serif;
                     color: #26439E;
                     font-weight: bold;
                 }
 
-                >.todayWord {
-                    // border:1px solid black;
-                    margin-top: 40px;
+                .todayWord {
+                    margin-top: 50px;
                     text-align: center;
-                    position: relative;
 
                     >span {
                         // border:1px solid black;
@@ -126,20 +104,22 @@
                     }
 
                     >img {
-                        width: 45%;
-                        display: block;
+                        width: 40%;
                         z-index: 10;
                         // border:1px solid black;
                         position: absolute;
                         left: 48%;
                         top: 45%;
                         transform: translate(-50%, -50%);
+                        display: inline-block;
+
                     }
 
                 }
 
                 .wordEx {
-                    margin-top: 40px;
+                    width: 70%;
+                    margin: 60px auto 0;
                     padding-bottom: 30px;
                     font-weight: bold;
                     font-size: 0.9em;
