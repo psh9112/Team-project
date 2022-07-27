@@ -22,7 +22,8 @@ function init() {
         const elPrev = document.querySelector('.pagenum .img:nth-of-type(1)');
         const elNext = document.querySelector('.pagenum .img:nth-of-type(2)');
         let elData = [], elList = [], elPush = '';
-        let idx = 0, key = 0;
+        let idx = 0;
+
         data.forEach(function (v) {
             try {
                 if (v.question.cdata.match(param)) {
@@ -73,25 +74,22 @@ function init() {
             });
         });
 
-        //next btn
-        for (let i = 0; i < elNum1.length; i++) {
-            elNext.addEventListener('click', function () {
-                if (!elNum1.classList.contains('active')) {
-                    elNum1[key].classList.remove('active');
-                    elNum1[i].classList.add('active');
-                } else {
-                    elNum1[key].classList.remove('active');
-                }
-                key = i;
-
-            });
-        }
-
-
-
         openFun();
     };
 
+    
+    let moveNum1 = 1--, moveNum2 = 1++;
+    //next btn
+    elNext.addEventListener('click', function () {
+        let val = Number(elNum1[moveNum].textContent);
+        elBox1.innerHTML = elList[val];
+    });
+
+    //preview btn
+    elPrev.addEventListener('click', function () {
+        let val = Number(this.textContent);
+        elBox1.innerHTML = elList[val]; 
+    });
 
 
 

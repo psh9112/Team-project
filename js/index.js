@@ -1,38 +1,3 @@
-let page ='';
-let data = '';
-
-let elText = '';
-let text = document.querySelectorAll('.section01 .list p');
-let chu = '';
-
-$.ajax({
-	url: './js/html.json',
-	success: function (dd) {
-		console.log(dd.url[0].information);
-
-		localStorage.setItem('url', JSON.stringify(dd.url[0]));
-		localStorage.setItem('node', JSON.stringify(dd.object));
-
-		data = JSON.parse(localStorage.getItem('url'));
-
-		page = data.information;
-		console.log(page);
-	}
-})
-
-
-
-text.forEach(function (el, idx) {
-	el.addEventListener('click', function () {
-		
-		localStorage.name = this.textContent;
-		location.replace('../information.html');
-
-		// elText += chu;
-
-	})
-})
-
 
 $.ajax({
     url: './api/worddictionary.json',
@@ -48,7 +13,7 @@ $.ajax({
                 word = `${num.data[i].용어명}`;
                 mean = `${num.data[i].설명}`;
                 
-                $('.todayWord p').html(word);
+                $('.todayWord b').html(word);
                 $('.wordEx').html(mean);
             }
         })

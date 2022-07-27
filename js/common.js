@@ -13,7 +13,7 @@ function hello() {
 
         $('header').addClass('fixedH');
 
-        $('.tab').css('padding-top', '130px');
+        // $('.tab').css('padding-top', '130px');
         
         if (scrollTop <= 100) {
             $('header').removeClass('fixedH');
