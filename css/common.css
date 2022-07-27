@@ -74,7 +74,7 @@ a {
         width: 100%;
         background-color: #004032;
     }
-    
+
     .fixedH {
         position: fixed;
         left: 0;
@@ -109,7 +109,6 @@ a {
     header>.all>.top>.logo>a {
         width: 100%;
         /* height: 50px; */
-
         font-family: 'Do Hyeon', sans-serif;
         /* border:1px solid white; */
         font-size: 1.2em;
@@ -137,6 +136,42 @@ a {
         height: 4px;
         background-color: white;
     }
+
+
+
+    .tab {
+        width: 100%;
+        background-color: #004032;
+        display: flex;
+        padding: 30px 0 0;
+    }
+
+    .tab .sub {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .tab .sub>a {
+        font-family: 'Do Hyeon', sans-serif;
+        color: white;
+        font-size: 1.1em;
+        letter-spacing: -8%;
+    }
+
+
+    .tab .sub>span {
+        margin-top: 5px;
+        height: 0.8em;
+        width: 2px;
+        background-color: white;
+    }
+
+
+
+
 
     .popup {
         display: none;
