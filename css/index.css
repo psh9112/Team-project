@@ -92,16 +92,6 @@ main .section01 > .board > .list > ul > li > a > p {
   font-size: 0.8em;
   color: black;
 }
-main .section01 > .board > .list > ul > li:nth-of-type(9) > a > p {
-  margin-top: 5px;
-  font-size: 0.6em;
-  white-space: pre-line;
-}
-main .section01 > .board > .list > ul > li:nth-of-type(10) > a > p {
-  margin-top: 5px;
-  font-size: 0.6em;
-  white-space: pre-line;
-}
 main .section02 {
   width: 90%;
   height: -webkit-fit-content;

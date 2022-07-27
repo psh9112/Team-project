@@ -55,7 +55,7 @@ $.ajax({
 	}
 })
 
-
+localStorage.name = '근로기준';
 
 text.forEach(function (el, idx) {
 	el.addEventListener('click', function () {

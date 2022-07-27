@@ -28,11 +28,20 @@ $.ajax({
             exe($(this));
         });
 
+        
+        //초기세팅        
+        elBtns.forEach(function (el, key) {
+            el.classList.remove('active');
+            elTabs[key].classList.remove('active');
+        });
+        elBtns[1].classList.add('active');
+        elTabs[1].classList.add('active');
         $('.object > ul > li').each(function () {
             if ($(this).text() == localStorage.name + '법') {
                 exe($(this));
             }
         });
+        //초기세팅 end       
 
 
         function exe(_this) {
@@ -79,9 +88,10 @@ $.ajax({
                     $('.contains .string').text(strFun(txt, 500));
                 }
             });
+        } 
+        
 
-
-        } printFun($(infoData).find('items').eq(0))
+        
 
         elBtn1.addEventListener('click', function () {
             printFun($(infoData).find('items').eq(0));
@@ -97,12 +107,10 @@ $.ajax({
 
 }); //ajax-success.end
 
-const elBtn1 = document.querySelector('.contain p:nth-of-type(1)');
-const elBtn2 = document.querySelector('.contain p:nth-of-type(2)');
 const elBtns = document.querySelectorAll('.contain p');
 const elTabs = document.querySelectorAll('.object > ul');
 const elList = document.querySelectorAll('.object > ul > li');
-
+// 카테고리 선택 시 해당 리스트 목록 보여주기
 function selectFun() {
 
     let idx = 0, val = 0;
