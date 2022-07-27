@@ -1,51 +1,99 @@
 
 
-function init(){
+function init() {
     let data;
 
-    async function dataFn(u1,u2) {        
+    async function dataFn(u1, u2) {
         let a = await fetch(u1);
         let b = await a.json();
         let c = await fetch(u2);
         let d = await c.json();
-        data  = await b.item.concat(d.item);
-        
+        data = await b.item.concat(d.item);
+
         list('근로계약서');
     }
-    dataFn('./api/law_QnA1.json','./api/law_QnA2.json');
+    dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
 
-    
-    function list(param){
+
+    function list(param) {
         //data print 
-        let elBox1 = document.querySelector('.qna .box01 > ul');
-        let elData = '';
+        const elBox1 = document.querySelector('.qna .box01 > ul');
+        const elNum1 = document.querySelectorAll('.pagenum .num');
+        const elPrev = document.querySelector('.pagenum .img:nth-of-type(1)');
+        const elNext = document.querySelector('.pagenum .img:nth-of-type(2)');
+        let elData = [], elList = [], elPush = '';
+        let idx = 0, key = 0;
         data.forEach(function (v) {
             try {
                 if (v.question.cdata.match(param)) {
-                    elData += `<li>
-                    <div class="container">
-                        <p class="question">
-                            <b>Q.</b>
-                            <span>${v.question.cdata}</span>
-                        </p>
-                        <p class="plus">
-                            <button><span></span><span></span></button>
-                        </p>
-                    </div>
-                    <div class="answer">
-                        <b>A.</b>
-                        <span>${v.answer.cdata}</span>
-                    </div>
-                </li>`;
+                    elData.push(`<li>
+                        <div class="container">
+                            <p class="question">
+                                <b>Q.</b>
+                                <span>${v.question.cdata}</span>
+                            </p>
+                            <p class="plus">
+                                <button><span></span><span></span></button>
+                            </p>
+                        </div>
+                        <div class="answer">
+                            <b>A.</b>
+                            <span>${v.answer.cdata}</span>
+                        </div>
+                    </li>`);
                 }
             } catch { }
 
         })
 
-        elBox1.innerHTML = elData;
+        elData.forEach(function (v, k) {
+            elPush += v;
+
+            if (k % 5 == 0 && k) {
+                elList.push(elPush);
+                elPush = '';
+            }
+        });
+
+        elBox1.innerHTML = elList[0];
+
+        //numbtn
+        elNum1.forEach(function (e, key) {
+            e.addEventListener('click', function () {
+                if (!this.classList.contains('active')) {
+                    elNum1[idx].classList.remove('active');
+                    elNum1[key].classList.add('active');
+                } else {
+                    elNum1[idx].classList.remove('active');
+                }
+                idx = key;
+
+                let val = Number(this.textContent);
+                elBox1.innerHTML = elList[val];
+            });
+        });
+
+        //next btn
+        for (let i = 0; i < elNum1.length; i++) {
+            elNext.addEventListener('click', function () {
+                if (!elNum1.classList.contains('active')) {
+                    elNum1[key].classList.remove('active');
+                    elNum1[i].classList.add('active');
+                } else {
+                    elNum1[key].classList.remove('active');
+                }
+                key = i;
+
+            });
+        }
+
+
+
         openFun();
-    }
-    
+    };
+
+
+
 
     function openFun() {
         //list open
@@ -80,13 +128,13 @@ function init(){
     //search btn
     const elShow = document.querySelector('.search > p > button');
     const elSearch = document.querySelector('.search > p > input');
-    elShow.addEventListener('click',function(){
+    elShow.addEventListener('click', function () {
         console.log(elSearch.value)
         list(elSearch.value);
     })
 
 }
-window.addEventListener('load',init);
+window.addEventListener('load', init);
 
 
 

@@ -132,7 +132,7 @@
     margin: 20px auto;
     text-align: center;
   }
-  main .qna .pagenum button {
+  main .qna .pagenum .num {
     width: 30px;
     height: 30px;
     display: inline-block;
@@ -143,7 +143,22 @@
     text-align: center;
     position: relative;
   }
-  main .qna .pagenum button img {
+  main .qna .pagenum .num.active {
+    color: #fff;
+    background-color: #aaa;
+  }
+  main .qna .pagenum .img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: none;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  }
+  main .qna .pagenum .img img {
     width: 50%;
     position: absolute;
     top: 50%;

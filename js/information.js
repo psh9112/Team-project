@@ -57,16 +57,6 @@ $.ajax({
             let txt = $('.contains .string').text().trim();
             $('.contains .string').text(strFun(txt, 500));
 
-            // 더보기 버튼
-            $('.explain .btn').on('click', function () {
-                $(this).toggleClass('active');
-                $('.contains .string').text(txt);
-                if(!$(this).hasClass('active')){
-                    $('.contains .string').text(txt,500);
-                }
-            });
-
-
         } // printFun end
         printFun($(infoData).find('items').eq(0));
 
@@ -78,6 +68,16 @@ $.ajax({
             printFun($(infoData).find('items').eq(18));
         });
 
+
+        // 더보기 버튼
+        $('.explain .btn').on('click', function () {
+            $(this).toggleClass('active');
+            $('.contains .string').text(txt);
+
+            if (!$(this).hasClass('active')) {
+                $('.contains .string').text(txt, 500);
+            }
+        });
 
 
     }
@@ -129,28 +129,27 @@ function selectFun() {
 
 
 
-
-
-
+//QnA 데이터 불러오기
 let data;
 
-async function dataFn(u1,u2) {        
+async function dataFn(u1, u2) {
     let a = await fetch(u1);
     let b = await a.json();
     let c = await fetch(u2);
     let d = await c.json();
-    data  = await b.item.concat(d.item);
-    
+    data = await b.item.concat(d.item);
+
     list('근로기준');
 }
-dataFn('./api/law_QnA1.json','./api/law_QnA2.json');
+dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
 
-
-function list(param){
+//불러온 데이터 출력
+function list(param) {
     //data print 
     let elBox1 = document.querySelector('.qna .box01 > ul');
-    let elData = '';
-    data.forEach(function (v) {
+    let elData = '', list=[];
+
+    data.forEach(function (v,k) {
         try {
             if (v.question.cdata.match(param)) {
                 elData += `<li>
@@ -170,7 +169,7 @@ function list(param){
             </li>`;
             }
         } catch { }
-
+    
     })
 
     elBox1.innerHTML = elData;
@@ -178,7 +177,7 @@ function list(param){
 }
 
 
-
+//QnA open/close
 function openFun() {
     //list open
     const elPlus = document.querySelectorAll('.qna .box01 > ul > li .container .plus > button');

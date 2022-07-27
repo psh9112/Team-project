@@ -37,10 +37,11 @@
                     font-size: 0.95em;
                 }
 
-                >button{
+                >button {
                     border: none;
                     outline: none;
                     background: none;
+
                     img {
                         width: 100%;
                         position: absolute;
@@ -56,7 +57,7 @@
             width: 100%;
             margin: 0 auto 60px;
 
-            >article{
+            >article {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
@@ -85,13 +86,14 @@
 
                             .question {
                                 width: 90%;
-                                
-                                >b{
+
+                                >b {
                                     color: #262626;
                                     font-weight: bold;
                                     font-size: 1.1em;
                                 }
-                                >span{
+
+                                >span {
                                     font-size: 0.9em;
                                 }
                             }
@@ -102,7 +104,7 @@
                                 text-align: right;
                                 overflow: hidden;
                                 position: relative;
-                                
+
                                 button {
                                     width: 100%;
                                     border: none;
@@ -139,13 +141,14 @@
                             padding: 15px 10px;
                             background-color: #F4F1DE;
                             display: none;
-                            
-                            >b{
+
+                            >b {
                                 color: rgb(212, 4, 4);
                                 font-weight: bold;
                                 font-size: 1.1em;
                             }
-                            >span{
+
+                            >span {
                                 font-size: 0.8em;
                             }
 
@@ -162,7 +165,24 @@
                 margin: 20px auto;
                 text-align: center;
 
-                button {
+                .num {
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    background: none;
+                    outline: none;
+                    border: 1px solid #ccc;
+                    border-radius: 10px;
+                    text-align: center;
+                    position: relative;
+
+                    &.active {
+                        color: #fff;
+                        background-color: #aaa;
+                    }
+                }
+
+                .img {
                     width: 30px;
                     height: 30px;
                     display: inline-block;
