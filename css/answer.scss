@@ -47,6 +47,34 @@
             }
         }
 
+        .relative {
+            width: 70%;
+            margin: 0px auto 0;
+
+            .three {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                >li {
+                    display: inline;
+                    background-color: rgba(0, 64, 50, 0.7);
+
+                    >a {
+                        font-size: 0.8em;
+                        text-decoration: none;
+                        color: white;
+
+                        &:active {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        
         .qna {
             width: 100%;
             margin: 40px auto 60px;

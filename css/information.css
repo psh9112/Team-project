@@ -16,15 +16,9 @@
   main .contain {
     width: 100%;
     margin: 0 auto 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
   }
   main .contain .h3 {
     width: 50%;
@@ -40,14 +34,9 @@
   }
   main .object .work {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: left;
+    flex-wrap: wrap;
     overflow: hidden;
   }
   main .object .work li {
@@ -64,14 +53,9 @@
   }
   main .object .protect {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: left;
+    flex-wrap: wrap;
     overflow: hidden;
     display: none;
   }
@@ -153,15 +137,9 @@
   main .qna .box01 ul li .container {
     width: 100%;
     margin-bottom: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
   main .qna .box01 ul li .container .question {
     width: 80%;
@@ -182,5 +160,4 @@
     font-size: 0.8em;
     display: none;
   }
-}
-/*# sourceMappingURL=information.css.map */
+}/*# sourceMappingURL=information.css.map */

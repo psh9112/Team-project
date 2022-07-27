@@ -72,6 +72,7 @@ function init() {
 
                 let val = Number(this.textContent);
                 elBox1.innerHTML = elList[val];
+                openFun();
             });
         });
 
@@ -128,19 +129,6 @@ function init() {
 
 }
 window.addEventListener('load', init);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

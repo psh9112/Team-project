@@ -36,8 +36,30 @@
     position: absolute;
     right: 8%;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  main .relative {
+    width: 70%;
+    margin: 0px auto 0;
+  }
+  main .relative .three {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  main .relative .three > li {
+    display: inline;
+    background-color: rgba(0, 64, 50, 0.7);
+  }
+  main .relative .three > li > a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: white;
+  }
+  main .relative .three > li > a:active {
+    color: white;
   }
   main .qna {
     width: 100%;
@@ -56,15 +78,9 @@
   main .qna .box01 ul li .container {
     width: 100%;
     margin-bottom: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
   main .qna .box01 ul li .container .question {
     width: 80%;
@@ -109,8 +125,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   main .play {
     width: 100%;
@@ -123,5 +138,4 @@
   main .play .video li iframe {
     width: 100%;
   }
-}
-/*# sourceMappingURL=answer.css.map */
+}/*# sourceMappingURL=answer.css.map */
