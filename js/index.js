@@ -8,13 +8,13 @@ function head() {
     let scrolltop = '';
 
     $(document).on('scroll', function () {
-        scrolltop = $(document).scrollY;
+        scrollTop = $(document).scrollY;
 
         $('header').addClass('fixedH');
 
         $('.tab').css('padding-top', '130px');
         
-        if (scrolltop <= 100) {
+        if (scrollTop <= 100) {
             $('header').removeClass('fixedH');
             $('.tab').css('padding-top', '0px');
         }
@@ -62,6 +62,8 @@ text.forEach(function (el, idx) {
 		
 		localStorage.name = this.textContent;
 		location.replace('./information.html');
+
+		// elText += chu;
 
 	})
 })

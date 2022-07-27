@@ -14,7 +14,7 @@ function init() {
     }
     dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
 
-    
+
     const elBox1 = document.querySelector('.qna .box01 > ul');
     const elNum1 = document.querySelectorAll('.pagenum .num');
     const elPrev = document.querySelector('.pagenum .img:nth-of-type(1)');
@@ -23,7 +23,6 @@ function init() {
     function list(param) {
         //data print 
         let elData = [], elList = [], elPush = '';
-        let idx = 0;
 
         data.forEach(function (v) {
             try {
@@ -58,9 +57,10 @@ function init() {
         });
 
         elBox1.innerHTML = elList[0];
-        
+
         //numbtn
         elNum1.forEach(function (e, key) {
+            let idx = 0;
             e.addEventListener('click', function () {
                 if (!this.classList.contains('active')) {
                     elNum1[idx].classList.remove('active');
@@ -72,6 +72,7 @@ function init() {
 
                 let val = Number(this.textContent);
                 elBox1.innerHTML = elList[val];
+
                 openFun();
             });
         });
@@ -80,14 +81,13 @@ function init() {
 
     }; //list end
 
-    
-    //next btn
-    elNext.addEventListener('click', function () {});
+/*
+//next btn
+elNext.addEventListener('click', function () {});
 
-    //preview btn
-    elPrev.addEventListener('click', function () {});
-
-
+//preview btn
+elPrev.addEventListener('click', function () {});
+*/
 
     function openFun() {
         //list open

@@ -15,7 +15,7 @@
   }
   main .search {
     width: 80%;
-    margin: 0 auto 80px;
+    margin: 20px auto 10px;
   }
   main .search p {
     position: relative;
@@ -29,9 +29,14 @@
     padding: 5px;
     border: none;
     outline: none;
-    font-size: 1.2em;
+    font-size: 0.95em;
   }
-  main .search p img {
+  main .search p > button {
+    border: none;
+    outline: none;
+    background: none;
+  }
+  main .search p > button img {
     width: 100%;
     position: absolute;
     right: 8%;
@@ -40,7 +45,7 @@
   }
   main .relative {
     width: 70%;
-    margin: 0px auto 0;
+    margin: 0px auto 60px;
   }
   main .relative .three {
     width: 100%;
@@ -63,10 +68,16 @@
   }
   main .qna {
     width: 100%;
-    margin: 40px auto 60px;
+    margin: 0 auto 60px;
   }
-  main .qna .h5 {
+  main .qna > article {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .qna > article .h5 {
+    width: 50%;
     padding-bottom: 10px;
   }
   main .qna .box01 ul li {
@@ -77,39 +88,74 @@
   }
   main .qna .box01 ul li .container {
     width: 100%;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   main .qna .box01 ul li .container .question {
-    width: 80%;
-    font-size: 1em;
+    width: 90%;
+  }
+  main .qna .box01 ul li .container .question > b {
+    color: #262626;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  main .qna .box01 ul li .container .question > span {
+    font-size: 0.9em;
   }
   main .qna .box01 ul li .container .plus {
-    width: 10%;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    text-align: right;
+    overflow: hidden;
+    position: relative;
   }
-  main .qna .box01 ul li .container .plus span {
-    width: 15px;
-  }
-  main .qna .box01 ul li .container .plus span:nth-of-type(1) {
+  main .qna .box01 ul li .container .plus button {
     width: 100%;
-    border-bottom: 2px solid #262626;
+    border: none;
+    outline: none;
+    background: none;
+    transition: 0.5s;
+  }
+  main .qna .box01 ul li .container .plus button span {
+    width: 100%;
+    border-top: 2px solid #262626;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+  }
+  main .qna .box01 ul li .container .plus button span:nth-of-type(2) {
+    transform: rotate(90deg);
+  }
+  main .qna .box01 ul li .container .plus button.active span:nth-of-type(2) {
+    transform: rotate(180deg);
   }
   main .qna .box01 ul li .answer {
     width: 100%;
     padding: 15px 10px;
     background-color: #F4F1DE;
-    font-size: 0.8em;
     display: none;
+  }
+  main .qna .box01 ul li .answer > b {
+    color: rgb(212, 4, 4);
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  main .qna .box01 ul li .answer > span {
+    font-size: 0.8em;
+  }
+  main .qna .box01 ul li .answer.active {
+    display: block;
   }
   main .qna .pagenum {
     width: 100%;
     margin: 20px auto;
     text-align: center;
   }
-  main .qna .pagenum button {
+  main .qna .pagenum .num {
     width: 30px;
     height: 30px;
     display: inline-block;
@@ -120,7 +166,22 @@
     text-align: center;
     position: relative;
   }
-  main .qna .pagenum button img {
+  main .qna .pagenum .num.active {
+    color: #fff;
+    background-color: #aaa;
+  }
+  main .qna .pagenum .img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: none;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  }
+  main .qna .pagenum .img img {
     width: 50%;
     position: absolute;
     top: 50%;
@@ -129,13 +190,15 @@
   }
   main .play {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 70px;
     overflow: hidden;
+    display: inline-block;
   }
-  main .play .h5 {
-    margin-bottom: 10px;
+  main .play .play-list {
+    width: 100%;
+    margin-top: 10px;
   }
-  main .play .video li iframe {
+  main .play .play-list .slide li iframe {
     width: 100%;
   }
 }/*# sourceMappingURL=answer.css.map */

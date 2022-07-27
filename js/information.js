@@ -195,22 +195,6 @@ function list(param) {
 
     elBox1.innerHTML = elList[0];
 
-    //numbtn
-    elNum1.forEach(function (e, key) {
-        e.addEventListener('click', function () {
-            if (!this.classList.contains('active')) {
-                elNum1[idx].classList.remove('active');
-                elNum1[key].classList.add('active');
-            } else {
-                elNum1[idx].classList.remove('active');
-            }
-            idx = key;
-
-            let val = Number(this.textContent);
-            elBox1.innerHTML = elList[val];
-        });
-    });
-
     openFun();
 };
 
