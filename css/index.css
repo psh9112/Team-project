@@ -2,21 +2,29 @@
 .tab {
   width: 100%;
   background-color: #004032;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 130px 0 20px;
 }
+
 .tab > .sub {
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .tab > .sub > a {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
   color: white;
   font-size: 1em;
   letter-spacing: -7%;
 }
+
 .tab > .sub > span {
   margin-top: 5px;
   height: 0.8em;
@@ -29,17 +37,20 @@ main {
   width: 100%;
   margin: 70px auto 40px;
 }
+
 main .section01 {
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
+
 main .section01 > .title {
   width: 100%;
-  font-family: "Do Hyeon", sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
   font-size: 2em;
   color: #004032;
 }
+
 main .section01 > .board {
   width: 100%;
   padding: 8px;
@@ -47,18 +58,27 @@ main .section01 > .board {
   border: 1px solid #cdcdcd;
   border-radius: 30px;
 }
+
 main .section01 > .board > .list {
   width: 95%;
   margin: 0 auto;
 }
+
 main .section01 > .board > .list > ul {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   vertical-align: center;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
+
 main .section01 > .board > .list > ul > li {
   width: 19%;
   margin: 2% auto 1%;
@@ -66,30 +86,43 @@ main .section01 > .board > .list > ul > li {
   border-radius: 15px;
   background-color: #cdcdcd;
 }
+
 main .section01 > .board > .list > ul > li > a {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 main .section01 > .board > .list > ul > li > a > img {
   width: 60%;
   margin: 0 auto;
 }
+
 main .section01 > .board > .list > ul > li > a > p {
   font-size: 0.8em;
   color: black;
 }
+
 main .section01 > .board > .list > ul > li:nth-of-type(9) > a > p {
   margin-top: 5px;
-  font-size: 0.6em;
+  font-size: 0.8em;
   white-space: pre-line;
 }
+
 main .section01 > .board > .list > ul > li:nth-of-type(10) > a > p {
   margin-top: 5px;
-  font-size: 0.6em;
+  font-size: 0.8em;
   white-space: pre-line;
 }
+
 main .section02 {
   width: 90%;
   height: -webkit-fit-content;
@@ -101,81 +134,106 @@ main .section02 {
   border-radius: 30px;
   background-color: #FFDD78;
 }
+
 main .section02 .box_01 {
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
+
 main .section02 .box_01 .today {
   margin-top: 20px;
-  font-family: "Do Hyeon", sans-serif;
+  margin-bottom: 30px;
+  font-family: 'Do Hyeon', sans-serif;
   color: #26439E;
   font-weight: bold;
 }
+
 main .section02 .box_01 > .todayWord {
-  margin: 50px auto;
+  margin: 40px auto;
   text-align: center;
 }
+
 main .section02 .box_01 > .todayWord > span {
-  width: 40%;
+  width: 70%;
   z-index: 8;
   position: absolute;
-  left: 48%;
+  left: 47%;
   top: 45%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: inline-block;
 }
+
 main .section02 .box_01 > .todayWord > span > b {
   font-size: 1.5em;
   color: #004032;
   font-weight: bold;
 }
+
 main .section02 .box_01 > .todayWord > img {
-  width: 40%;
+  width: 80%;
+  height: 45%;
   z-index: 10;
   position: absolute;
-  left: 45%;
+  left: 46%;
   top: 45%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: inline-block;
 }
+
 main .section02 .box_01 .wordEx {
   width: 90%;
-  margin-top: 40px;
+  margin-top: 50px;
   margin: 120px auto 0;
+  padding-top: 60px;
   padding-bottom: 30px;
   font-weight: bold;
   font-size: 0.9em;
 }
+
 main .section03 {
   width: 90%;
   margin: 80px auto 0;
   text-align: center;
 }
+
 main .section03 > p {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
   font-size: 2em;
   color: #004032;
   font-weight: bold;
   margin-bottom: 20px;
 }
+
 main > .section04 {
   width: 90%;
   margin: 80px auto 0;
   text-align: center;
 }
+
 main > .section04 > .banboard {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 main > .section04 > .banboard > .slide {
   width: 100%;
 }
+
 main > .section04 > .banboard > .slide > a {
   width: 100%;
 }
+
 main > .section04 > .banboard > .slide > a > img {
   width: 100%;
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */

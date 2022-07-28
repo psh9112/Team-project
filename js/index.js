@@ -31,7 +31,19 @@ let elText = '';
 let text = document.querySelectorAll('.section01 .list ul li');
 let chu = '';
 
+// $.ajax({
+//     url: './js/html.json',
+//     success: function (dd) {
+//         // console.log(dd.url[0].information);
 
+//         localStorage.setItem('url', JSON.stringify(dd.url[0]));
+//         localStorage.setItem('node', JSON.stringify(dd.object));
+
+//         data = JSON.parse(localStorage.getItem('url'));
+//         page = data.information;
+//         console.log(page);
+//     }
+// })
 
 localStorage.name = '근로기준';
 localStorage.number = 0;
