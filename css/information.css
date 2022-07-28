@@ -57,7 +57,7 @@
     background-color: #FFDD78;
   }
   main .object .work.active {
-    display: flex;
+    display: block;
   }
   main .object .protect {
     width: 100%;
@@ -80,7 +80,7 @@
     background-color: #FFDD78;
   }
   main .object .protect.active {
-    display: flex;
+    display: block;
   }
   main .explain {
     width: 100%;

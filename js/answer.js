@@ -76,19 +76,19 @@ function init() {
             //next btn
         });
 
-        elNum1.forEach(function (e, key) {
-            elNext.addEventListener('click', function () {
-                elNum1[idx].classList.remove('active');
-                elNum1[key].classList.add('active');
+        // elNum1.forEach(function (e, key) {
+        //     elNext.addEventListener('click', function () {
+        //         elNum1[idx].classList.remove('active');
+        //         elNum1[key].classList.add('active');
 
-                idx = key;
+        //         idx = key;
 
-                let val = Number(this.textContent);
-                elBox1.innerHTML = elList[val]++;
-                openFun();
-            });
+        //         let val = Number(this.textContent);
+        //         elBox1.innerHTML = elList[val]++;
+        //         openFun();
+        //     });
 
-        });
+        // });
         openFun();
 
     }; //list end
