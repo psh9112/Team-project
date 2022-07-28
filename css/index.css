@@ -115,7 +115,7 @@ main .section02 .box_01 .today {
   font-weight: bold;
 }
 main .section02 .box_01 > .todayWord {
-  margin: 50px auto;
+  margin: 30px auto;
   text-align: center;
 }
 main .section02 .box_01 > .todayWord > span {
