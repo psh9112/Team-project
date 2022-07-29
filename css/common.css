@@ -110,18 +110,18 @@ a {
     }
 
     header>.all>.top>.logo>a>img {
-        width: 25%;
+        width: 20%;
     }
 
-    header>.all>.top>.logo> a > P {
+    header>.all>.top>.logo> a > p {
         font-family: 'Do Hyeon', sans-serif;
         display: inline-block;
-        /* width: 70%; */
-        font-size: 1.4em;
+        font-size: 2.5em;
         color: white;
-        /* height: 50px; */
-        /* border:1px solid white; */
-        /* margin: auto;
+        /* width: 70%;
+        height: 50px;
+        border:1px solid white;
+        margin: auto;
         font-weight:bold; */
     }
 
@@ -140,6 +140,7 @@ a {
         background-color: white;
     }
 
+    /* 버거메뉴 */
     .popup {
         display: none;
         transition: 0.5s;
