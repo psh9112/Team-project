@@ -29,7 +29,7 @@
     background-color: #000;
 }
 .slide .slick-slide iframe{
-    width:100%; height: 30vh;
+    width:100%; height: 40vh;
     object-fit: cover;
     opacity: 0.4;
 }
