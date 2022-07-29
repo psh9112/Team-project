@@ -1,7 +1,7 @@
 
 
 function init() {
-    let data;
+    let data, tag;
 
     async function dataFn(u1, u2) {
         let a = await fetch(u1);
@@ -14,10 +14,21 @@ function init() {
     }
     dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
 
+    // async function wordFn(w1) {
+    //     let e = await fetch(w1);
+    //     let f = await e.json();
+    //     tag = await f.data;
+
+    //     hashTag('근로');
+    // }
+    // wordFn('./api/worddictionary.json');
+
     const elBox1 = document.querySelector('.qna .box01 > ul');
+    const elTag = document.querySelector('.relative .three');
+    const elShow = document.querySelector('.search > p > button');
     const elNum1 = document.querySelectorAll('.pagenum .num');
-    const elPrev = document.querySelector('.pagenum .img:nth-of-type(1)');
-    const elNext = document.querySelector('.pagenum .img:nth-of-type(2)');
+    const elPrev = document.querySelector('.pagenum .prev');
+    const elNext = document.querySelector('.pagenum .next');
 
     function list(param) {
         //data print 
@@ -27,7 +38,7 @@ function init() {
             try {
                 if (v.question.cdata.match(param)) {
                     elData.push(`<li>
-                        <div class="container">
+                        <div class="container section">
                             <p class="question">
                                 <b>Q.</b>
                                 <span>${v.question.cdata}</span>
@@ -49,7 +60,7 @@ function init() {
         elData.forEach(function (t, k) {
             elPush += t;
 
-            if (k % 5 == 0 && k) {
+            if (k % 10 == 0 && k) {
                 elList.push(elPush);
                 elPush = '';
             }
@@ -57,7 +68,8 @@ function init() {
 
         elBox1.innerHTML = elList[0];
 
-        //numbtn
+
+        //numbtn / previous=이전
         let idx = 0, next = 0, prev = 0;
         elNum1.forEach(function (e, key) {
             e.addEventListener('click', function () {
@@ -72,33 +84,30 @@ function init() {
                 let val = Number(this.textContent);
                 elBox1.innerHTML = elList[val];
                 openFun();
-            });
-            //next btn
+            }); //click Event END
+
+        }); //elNum1 forEach END
+
+        // Next button
+        elNext.addEventListener('click', function () {
+
+            if (next < elNum1.length - 1) {
+                elNum1[next += 1].click();
+            }
+            console.log(elNum1.length - 1);
         });
+        // Next button END
 
-        // elNum1.forEach(function (e, key) {
-        //     elNext.addEventListener('click', function () {
-        //         elNum1[idx].classList.remove('active');
-        //         elNum1[key].classList.add('active');
-
-        //         idx = key;
-
-        //         let val = Number(this.textContent);
-        //         elBox1.innerHTML = elList[val]++;
-        //         openFun();
-        //     });
-
-        // });
+        //previous button
+        elPrev.addEventListener('click', function (){
+            if ( elNum1.length > prev ) {
+                elNum1[prev -= 1].click();
+            }
+        });
+        //previous button END
         openFun();
 
-    }; //list end
-
-
-    // //preview btn
-    // elPrev.addEventListener('click', function () { });
-
-
-
+    }; //list END
 
     function openFun() {
         //list open
@@ -127,19 +136,41 @@ function init() {
             });
         });
 
-    };//openFun end
+    };//List openFun END
 
 
-    //search btn
-    const elShow = document.querySelector('.search > p > button');
-    // const elSearch = document.querySelector('.search > p >  ');
+
+
+/*     function hashTag(param) {
+
+        let elHash = [], elEx = [], elPush = '';
+
+        tag.forEach(function (v) {
+            if (v.match(param)) {
+                elHash.push(`<li> #${v.용어명} </li>`);
+            };
+        });
+
+        elHash.forEach(function (a, b) {
+            elPush += a;
+        });
+
+        setTimeout(function () {
+            elTag.innerHTML(`${elPush[b]}`);
+            elTag.innerHTML(`${elPush[b]}`);
+            elTag.innerHTML(`${elPush[b]}`);
+        }, 1000);
+
+
+    }; */ //hashTag END
+
 
     elShow.addEventListener('click', function () {
         console.log(search.value)
         list(search.value);
+        // hashTag(search.value);
     })
 
 }
 window.addEventListener('load', init);
-
 

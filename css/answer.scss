@@ -5,7 +5,7 @@
 
     main {
         width: 90%;
-        margin: 170px auto 40px;
+        margin: 170px auto 100px;
 
         .topbtn {
             position: fixed;
@@ -15,6 +15,7 @@
 
             a {
                 display: inline-block;
+
                 img {
                     width: 100%;
                 }
@@ -63,23 +64,17 @@
             .three {
                 width: 100%;
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
                 flex-wrap: nowrap;
 
                 >li {
                     display: inline;
                     background-color: rgba(0, 64, 50, 0.7);
-
-                    >a {
-                        font-size: 0.8em;
-                        text-decoration: none;
-                        color: white;
-
-                        &:active {
-                            color: white;
-                        }
-                    }
+                    padding: 5px;
+                    font-size: 0.8em;
+                    color: white;
+                    border-radius: 15px;
                 }
             }
         }
@@ -193,7 +188,7 @@
 
             .pagenum {
                 width: 100%;
-                margin: 20px auto;
+                margin: 40px auto;
                 text-align: center;
 
                 .num {
@@ -235,25 +230,25 @@
             }
         }
 
-        .play {
-            width: 100%;
-            margin: 0 auto 70px;
-            overflow: hidden;
-            display: inline-block;
+        // .play {
+        //     width: 100%;
+        //     margin: 0 auto 70px;
+        //     overflow: hidden;
+        //     display: inline-block;
 
-            .play-list {
-                width: 100%;
-                margin-top: 10px;
+        //     .play-list {
+        //         width: 100%;
+        //         margin-top: 10px;
 
-                .slide {
-                    li {
-                        iframe {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
+        //         .slide {
+        //             li {
+        //                 iframe {
+        //                     width: 100%;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
     }
 
 

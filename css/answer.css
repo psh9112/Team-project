@@ -2,7 +2,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   main {
     width: 90%;
-    margin: 170px auto 40px;
+    margin: 170px auto 100px;
   }
   main .topbtn {
     position: fixed;
@@ -53,21 +53,17 @@
   main .relative .three {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
   }
   main .relative .three > li {
     display: inline;
     background-color: rgba(0, 64, 50, 0.7);
-  }
-  main .relative .three > li > a {
+    padding: 5px;
     font-size: 0.8em;
-    text-decoration: none;
     color: white;
-  }
-  main .relative .three > li > a:active {
-    color: white;
+    border-radius: 15px;
   }
   main .qna {
     width: 100%;
@@ -155,7 +151,7 @@
   }
   main .qna .pagenum {
     width: 100%;
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
   }
   main .qna .pagenum .num {
@@ -190,18 +186,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  main .play {
-    width: 100%;
-    margin: 0 auto 70px;
-    overflow: hidden;
-    display: inline-block;
-  }
-  main .play .play-list {
-    width: 100%;
-    margin-top: 10px;
-  }
-  main .play .play-list .slide li iframe {
-    width: 100%;
   }
 }/*# sourceMappingURL=answer.css.map */
