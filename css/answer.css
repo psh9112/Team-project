@@ -4,18 +4,6 @@
     width: 90%;
     margin: 170px auto 100px;
   }
-  main .topbtn {
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-    z-index: 1;
-  }
-  main .topbtn a {
-    display: inline-block;
-  }
-  main .topbtn a img {
-    width: 100%;
-  }
   main .search {
     width: 80%;
     margin: 20px auto 10px;
