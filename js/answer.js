@@ -16,7 +16,7 @@ function init() {
 
     // async function wordFn(w1) {
     //     let e = await fetch(w1);
-    //     let f = await e.json();
+    //     let f = await e.json();s
     //     tag = await f.data;
 
     //     hashTag('근로');
@@ -99,8 +99,8 @@ function init() {
         // Next button END
 
         //previous button
-        elPrev.addEventListener('click', function (){
-            if ( elNum1.length > prev ) {
+        elPrev.addEventListener('click', function () {
+            if (elNum1.length > prev) {
                 elNum1[prev -= 1].click();
             }
         });
@@ -141,28 +141,27 @@ function init() {
 
 
 
-/*     function hashTag(param) {
+    // function hashTag(param) {
 
-        let elHash = [], elEx = [], elPush = '';
+    //     let elHash = [], elEx = [], elPush = '';
 
-        tag.forEach(function (v) {
-            if (v.match(param)) {
-                elHash.push(`<li> #${v.용어명} </li>`);
-            };
-        });
+    //     tag.forEach(function (v) {
+    //         if (v.match(param)) {
+    //             elHash.push(`<li> #${v.용어명} </li>`);
+    //         };
+    //     });
 
-        elHash.forEach(function (a, b) {
-            elPush += a;
-        });
+    //     elHash.forEach(function (a, b) {
+    //         elPush += a;
+    //     });
 
-        setTimeout(function () {
-            elTag.innerHTML(`${elPush[b]}`);
-            elTag.innerHTML(`${elPush[b]}`);
-            elTag.innerHTML(`${elPush[b]}`);
-        }, 1000);
-
-
-    }; */ //hashTag END
+    //     setTimeout(function () {
+    //         elTag.innerHTML(`${elPush[b]}`);
+    //         elTag.innerHTML(`${elPush[b]}`);
+    //         elTag.innerHTML(`${elPush[b]}`);
+    //     }, 1000);
+    // };
+    //hashTag END
 
 
     elShow.addEventListener('click', function () {

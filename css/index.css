@@ -74,6 +74,7 @@
   }
   main .section01 > .board > .list > ul > li > a > img {
     width: 60%;
+    height: 52px;
     margin: 0 auto;
   }
   main .section01 > .board > .list > ul > li > a > p {
