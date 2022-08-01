@@ -14,22 +14,21 @@ function init() {
     }
     dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
 
-    // async function wordFn(w1) {
-    //     let e = await fetch(w1);
-    //     let f = await e.json();s
-    //     tag = await f.data;
+    async function wordFn(w1) {
+        let e = await fetch(w1);
+        let f = await e.json();
+        tag = await f.data;
 
-    //     hashTag('근로');
-    // }
-    // wordFn('./api/worddictionary.json');
+        hashTag('근로');
+    }
+    wordFn('./api/worddictionary.json');
 
-    const elBox1 = document.querySelector('.qna .box01 > ul');
     const elTag = document.querySelector('.relative .three');
+    const elBox1 = document.querySelector('.qna .box01 > ul');
     const elShow = document.querySelector('.search > p > button');
     const elNum1 = document.querySelectorAll('.pagenum .num');
     const elPrev = document.querySelector('.pagenum .prev');
     const elNext = document.querySelector('.pagenum .next');
-
 
 
     function list(param) {
@@ -68,8 +67,23 @@ function init() {
         });
 
         elBox1.innerHTML = elList[0];
-
-
+        if(!search.value == elList){
+            elBox1.innerHTML = '검색값과 일치한 값이 없습니다';
+        }
+        /* 
+        con의 갯수에 맞춰서 aside의 갯수가 늘어나고 줄어들게 만드시오!
+        for로
+        
+        $('.con').length
+        
+        $('aside').html('<a></a>')
+        
+        console.log(
+        $('.con').eq(0).offset().top,
+        $('.con').eq(1).offset().top,
+        $('.con').eq(2).offset().top
+        )
+        */
         //numbtn
         let idx = 0, move = 0;
         elNum1.forEach(function (e, key) {
@@ -93,10 +107,10 @@ function init() {
 
         //previous button
         elPrev.addEventListener('click', function () {
-            
-            if (0 < elNum1.length) {
-                elNum1[move - 1].click();
-            }else {
+
+            if (move < elNum1.length && !0 <= move) {
+                elNum1[move -= 1].click();
+            } else {
                 alert('더이상 값이 없습니다!')
             }
         });
@@ -105,7 +119,7 @@ function init() {
         // Next button
         elNext.addEventListener('click', function () {
             if (move < elNum1.length - 1) {
-                elNum1[move + 1].click();
+                elNum1[move += 1].click();
             } else {
                 alert('더이상 값이 없습니다!')
             }
@@ -147,36 +161,50 @@ function init() {
 
 
 
+    function hashTag(param) {
 
-    // function hashTag(param) {
 
-    //     let elHash = [], elEx = [], elPush = '';
+        let elHash = [], elWord = [], elIdx = '';
+        let mySet = new Set(), n;
 
-    //     tag.forEach(function (v) {
-    //         if (v.match(param)) {
-    //             elHash.push(`<li> #${v.용어명} </li>`);
-    //         };
-    //     });
+        tag.forEach(function (v) {
+            if (v.용어명.match(param)) {
+                elHash.push(`<li> #${v.용어명} </li>`);
+            };
+        });
 
-    //     elHash.forEach(function (a, b) {
-    //         elPush += a;
-    //     });
+        for (let i = 0; i < elHash.length; i++) {
+            let ran = Math.floor(Math.random() * 15);
+            
+            if(mySet.size < 3){
+                if (!mySet.has(ran)) {
+                    mySet.add(ran);
+                } else {                
+                    mySet.add(Math.floor(Math.random() * 15));
+                }
+            }
+        }
+        console.log(mySet.size);
 
-    //     setTimeout(function () {
-    //         elTag.innerHTML(`${elPush[b]}`);
-    //         elTag.innerHTML(`${elPush[b]}`);
-    //         elTag.innerHTML(`${elPush[b]}`);
-    //     }, 1000);
-    // };
+        mySet.forEach(function (i) {
+            elIdx += elHash[i];       
+
+        });
+
+        elTag.innerHTML = elIdx;
+        if(!search.value == elIdx){
+            elTag.innerHTML = '값이 없습니다';
+        }
+
+
+    };
     //hashTag END
 
 
     elShow.addEventListener('click', function () {
-        console.log(search.value)
+        hashTag(search.value);
         list(search.value);
-        // hashTag(search.value);
     })
 
 }
 window.addEventListener('load', init);
-
