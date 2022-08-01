@@ -30,6 +30,8 @@ function init() {
     const elPrev = document.querySelector('.pagenum .prev');
     const elNext = document.querySelector('.pagenum .next');
 
+
+
     function list(param) {
         //data print 
         let elData = [], elList = [], elPush = '';
@@ -58,21 +60,22 @@ function init() {
         })
 
         elData.forEach(function (t, k) {
-            elPush += t;
-
             if (k % 10 == 0 && k) {
                 elList.push(elPush);
                 elPush = '';
             }
+            elPush += t;
         });
 
         elBox1.innerHTML = elList[0];
 
 
-        //numbtn / previous=이전
-        let idx = 0, next = 0, prev = 0;
+        //numbtn
+        let idx = 0, move = 0;
         elNum1.forEach(function (e, key) {
+
             e.addEventListener('click', function () {
+                move = key;
                 if (!this.classList.contains('active')) {
                     elNum1[idx].classList.remove('active');
                     elNum1[key].classList.add('active');
@@ -88,23 +91,27 @@ function init() {
 
         }); //elNum1 forEach END
 
-        // Next button
-        elNext.addEventListener('click', function () {
-
-            if (next < elNum1.length - 1) {
-                elNum1[next += 1].click();
-            }
-            console.log(elNum1.length - 1);
-        });
-        // Next button END
-
         //previous button
         elPrev.addEventListener('click', function () {
-            if (elNum1.length > prev) {
-                elNum1[prev -= 1].click();
+            
+            if (0 < elNum1.length) {
+                elNum1[move - 1].click();
+            }else {
+                alert('더이상 값이 없습니다!')
             }
         });
         //previous button END
+
+        // Next button
+        elNext.addEventListener('click', function () {
+            if (move < elNum1.length - 1) {
+                elNum1[move + 1].click();
+            } else {
+                alert('더이상 값이 없습니다!')
+            }
+        });
+        // Next button END
+
         openFun();
 
     }; //list END
