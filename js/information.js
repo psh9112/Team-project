@@ -14,6 +14,8 @@ $.ajax({
     success: function (data) {
         infoData = data;
 
+        selectFun();
+
         //초기세팅--------------------------------------------------------------------     
 
         elBtns.forEach(function (el, key) {
@@ -25,14 +27,12 @@ $.ajax({
         elTabs[localStorage.number].classList.add('active');
 
 
-        elList.forEach(function (k) {
-            if (this.textContent == localStorage.name + '법' || this.textContent == localStorage.name + '보장법') {
+        $('.object > ul > li').each(function (k) {
+            if ($(this).text() == localStorage.name + '법' || $(this).text() == localStorage.name + '보장법') {
                 exe(k);
             }
         });
         //초기세팅 end--------------------------------------------------------------------     
-
-        selectFun();
 
 
     }//success end
@@ -55,13 +55,7 @@ function selectFun() {
 
             idx = key;
 
-            if(key == 0){
-                exe(0);
-                list('근로기준');
-            }else{
-                exe(18);
-                list('주택임대차');
-            };
+            (key == 0) ? exe(0) : exe(18);
 
         });
     });
@@ -82,7 +76,7 @@ function selectFun() {
         });
     });
 
-    
+
     // if (!localStorage.name == list(this.textContent.trim())) {
     //     elBox1.innerHTML = '일치하는 값이 없습니다';
     // }
