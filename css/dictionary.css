@@ -2,7 +2,7 @@
 @media (max-width: 768px) {
   main {
     width: 90%;
-    margin: 170px auto 100px;
+    margin: 150px auto 100px;
   }
   main > .h3 {
     text-align: center;
