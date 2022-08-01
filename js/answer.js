@@ -204,6 +204,9 @@ function init() {
     elShow.addEventListener('click', function () {
         hashTag(search.value);
         list(search.value);
+        if(!search.value == elIdx){
+            elTag.innerHTML = '값이 없습니다';
+        }
     })
 
 }

@@ -1,28 +1,3 @@
-$('header').load('inc.html > header > .all', head);
-$('.popup').load('inc.html > .popup > .pop_bg');
-$('footer').load('inc.html > footer > .footer');
-
-function head() {
-    $('.headline').css('padding-top', '5px');
-
-    let scrolltop = '';
-
-    $(document).on('scroll', function () {
-        scrolltop = $(document).scrollY;
-    })
-
-    $('.burger').on('click', function () {
-        $('.popup').addClass('active');
-        $('.pop_bg').addClass('left');
-        // setAttribute는 나중에
-
-        $('.right').on('click', function () {
-            $('.popup').removeClass('active');
-            $('.pop_bg').css('transform', 'translateX(100%)');
-        })
-
-    })
-}
 
 let page = '';
 let data = '';
