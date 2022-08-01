@@ -71,15 +71,13 @@ function selectFun() {
             console.log(obg[0]);
 
             localStorage.name = obg[0];
+            list(`${obg[0]}`)
 
-            list(`${obg[0]}`);
         });
     });
 
 
-    // if (!localStorage.name == list(this.textContent.trim())) {
-    //     elBox1.innerHTML = '일치하는 값이 없습니다';
-    // }
+
 }; //selectFun end
 
 //법률지식 내용 출력
@@ -214,7 +212,7 @@ function list(param) {
     });
 
     elBox1.innerHTML = elList[0];
-
+    
 
     openFun();
 };
