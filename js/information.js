@@ -14,8 +14,6 @@ $.ajax({
     success: function (data) {
         infoData = data;
 
-        selectFun();
-
         //초기세팅--------------------------------------------------------------------     
 
         elBtns.forEach(function (el, key) {
@@ -27,14 +25,14 @@ $.ajax({
         elTabs[localStorage.number].classList.add('active');
 
 
-        $('.object > ul > li').each(function (k) {
-            if ($(this).text() == localStorage.name + '법' || $(this).text() == localStorage.name + '보장법') {
+        elList.forEach(function (k) {
+            if (this.textContent == localStorage.name + '법' || this.textContent == localStorage.name + '보장법') {
                 exe(k);
             }
         });
         //초기세팅 end--------------------------------------------------------------------     
 
-
+        selectFun();
 
 
     }//success end
@@ -57,18 +55,37 @@ function selectFun() {
 
             idx = key;
 
-            (key == 0) ? exe(0) : exe(18);
+            if(key == 0){
+                exe(0);
+                list('근로기준');
+            }else{
+                exe(18);
+                list('주택임대차');
+            };
+
         });
     });
 
     elList.forEach(function (v, k) {
         v.addEventListener('click', function () {
             exe(k);
-            list(this.textContent.trim());
             localStorage.name = this.textContent.trim();
+
+            const local = localStorage.getItem('name');
+
+            let obg = local.split('법');
+            console.log(obg[0]);
+
+            localStorage.name = obg[0];
+
+            list(`${obg[0]}`);
         });
     });
 
+    
+    // if (!localStorage.name == list(this.textContent.trim())) {
+    //     elBox1.innerHTML = '일치하는 값이 없습니다';
+    // }
 }; //selectFun end
 
 //법률지식 내용 출력
@@ -119,7 +136,6 @@ function printFun(data) {
 
 //더보기 버튼----------------------------------------------
 
-
 function strFun(str, len) {
 
     let realStr = '';
@@ -141,8 +157,6 @@ $('.explain .btn').on('click', function () {
     }
 });
 
-
-
 //더보기 버튼 END----------------------------------------------
 
 
@@ -150,15 +164,9 @@ $('.explain .btn').on('click', function () {
 
 
 //QnA-----------------------------------------------------------
-// 법률지식과 관련된 QnA 보여주기
-
-
-
-
-
-
 
 //QnA 데이터 불러오기
+
 let data;
 
 async function dataFn(u1, u2) {
@@ -203,15 +211,16 @@ function list(param) {
     })
 
     elData.forEach(function (v, k) {
-        elPush += v;
 
         if (k % 5 == 0 && k) {
             elList.push(elPush);
             elPush = '';
         }
+        elPush += v;
     });
 
     elBox1.innerHTML = elList[0];
+
 
     openFun();
 };

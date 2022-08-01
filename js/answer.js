@@ -68,8 +68,9 @@ function init() {
 
         elBox1.innerHTML = elList[0];
         if(!search.value == elList){
-            elBox1.innerHTML = '검색값과 일치한 값이 없습니다';
+            elBox1.innerHTML = '검색결과 일치한 값이 없습니다';
         }
+
         /* 
         con의 갯수에 맞춰서 aside의 갯수가 늘어나고 줄어들게 만드시오!
         for로
@@ -84,6 +85,7 @@ function init() {
         $('.con').eq(2).offset().top
         )
         */
+
         //numbtn
         let idx = 0, move = 0;
         elNum1.forEach(function (e, key) {
@@ -187,14 +189,17 @@ function init() {
         console.log(mySet.size);
 
         mySet.forEach(function (i) {
-            elIdx += elHash[i];       
+            elIdx += elHash[i];
 
         });
 
-        elTag.innerHTML = elIdx;
-        if(!search.value == elIdx){
-            elTag.innerHTML = '값이 없습니다';
+        if(elHash.length){
+            elTag.innerHTML = elIdx;
+        }else{
+            elTag.innerHTML = '';
+            console.log('bbb')
         }
+
 
 
     };
@@ -204,9 +209,6 @@ function init() {
     elShow.addEventListener('click', function () {
         hashTag(search.value);
         list(search.value);
-        if(!search.value == elIdx){
-            elTag.innerHTML = '값이 없습니다';
-        }
     })
 
 }
