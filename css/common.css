@@ -154,7 +154,7 @@ a {
         display: inline-block;
     }
 
-    .topbtn>a>img{
+    .topbtn>a>img {
         width: 100%;
     }
 
@@ -164,17 +164,21 @@ a {
         transition: 0.5s;
         opacity: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
+        overflow: hidden;
+        overflow-y: auto;
         position: fixed;
         left: 0;
         top: 0;
         z-index: 102;
         background-color: rgba(0, 0, 0, 0.7);
+
     }
 
     .popup.active {
         display: block;
         opacity: 100%;
+
     }
 
     .popup>.pop_bg {
@@ -261,7 +265,7 @@ a {
 
     .search p {
         position: relative;
-        padding: 3px 10px;
+        padding: 5px 10px;
         border: 3px solid #004032;
         border-radius: 40px;
         background-color: antiquewhite;
@@ -273,7 +277,7 @@ a {
         padding: 5px;
         border: none;
         outline: none;
-        font-size: 1.2em;
+        font-size: 0.95em;
         background-color: antiquewhite;
     }
 
@@ -389,6 +393,21 @@ a {
     }
 
 
+    /* top-button */
+    main .topbtn {
+        position: fixed;
+        right: 3%;
+        bottom: 3%;
+        z-index: 1;
+    }
+
+    .topbtn p{
+        display: inline-block;
+    }
+
+    .topbtn > p > img{
+        width: 80%;
+    }
 
 
     footer {

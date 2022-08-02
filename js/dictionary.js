@@ -1,3 +1,17 @@
+let aaa = '';
+$('.popup').ready(function () {
+    setTimeout(function () {
+        $('#ipt').bind('input', function () {
+            // localStorage.input = ipt.value();
+            aaa = $('#ipt').val();
+
+            localStorage.setItem("key", aaa);
+
+            console.log(aaa);
+        });
+
+    }, 500, clearTimeout)
+});
 
 $.ajax({
     url: './api/worddictionary.json',
@@ -48,7 +62,16 @@ $.ajax({
                 $(this).find('span:eq(1)').addClass('on');
             })
         })
+
+
+        $('.search p button').on('click',function(){
+            if(list.val() == $('.search #word').val()){
+                $('.wl > ul').html(list);
+            }s
+            console.log($('.wl > ul').html(list[key]));
+        });
     }
 })
+
 
 

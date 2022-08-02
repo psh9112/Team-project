@@ -1,6 +1,25 @@
+let aaa = '';
+$('.popup').ready(function () {
+    setTimeout(function () {
+        $('#ipt').bind('input', function () {
+            // localStorage.input = ipt.value();
+            aaa = $('#ipt').val();
 
+            localStorage.setItem("key", aaa);
+
+            console.log(aaa);
+        });
+
+    }, 500, clearTimeout)
+});
+
+$('#search').val(localStorage.getItem('key'));
+setTimeout(function(){
+    localStorage.removeItem("key");
+},1500);
 
 function init() {
+
     let data, tag;
 
     async function dataFn(u1, u2) {
@@ -10,7 +29,11 @@ function init() {
         let d = await c.json();
         data = await b.item.concat(d.item);
 
-        list('근로기준');
+        if(!localStorage.getItem('key')){
+            list('근로');
+        }else{
+            list(search.value);
+        }
     }
     dataFn('./api/law_QnA1.json', './api/law_QnA2.json');
 
@@ -19,13 +42,17 @@ function init() {
         let f = await e.json();
         tag = await f.data;
 
-        hashTag('근로');
+        if(!localStorage.getItem('key')){
+            hashTag('근로');
+        }else{
+            hashTag(search.value);
+        }
     }
     wordFn('./api/worddictionary.json');
 
     const elTag = document.querySelector('.relative .three');
     const elBox1 = document.querySelector('.qna .box01 > ul');
-    const elShow = document.querySelector('.search > p > button');
+    const elBtn = document.querySelector('.search > p > button');
     const elNum1 = document.querySelectorAll('.pagenum .num');
     const elPrev = document.querySelector('.pagenum .prev');
     const elNext = document.querySelector('.pagenum .next');
@@ -59,7 +86,7 @@ function init() {
         })
 
         elData.forEach(function (t, k) {
-            if (k % 10 == 0 && k) {
+            if (k % 6 == 0 && k) {
                 elList.push(elPush);
                 elPush = '';
             }
@@ -67,24 +94,9 @@ function init() {
         });
 
         elBox1.innerHTML = elList[0];
-        if(!search.value == elList){
+        if (!search.value == elList) {
             elBox1.innerHTML = '검색결과 일치한 값이 없습니다';
         }
-
-        /* 
-        con의 갯수에 맞춰서 aside의 갯수가 늘어나고 줄어들게 만드시오!
-        for로
-        
-        $('.con').length
-        
-        $('aside').html('<a></a>')
-        
-        console.log(
-        $('.con').eq(0).offset().top,
-        $('.con').eq(1).offset().top,
-        $('.con').eq(2).offset().top
-        )
-        */
 
         //numbtn
         let idx = 0, move = 0;
@@ -92,6 +104,7 @@ function init() {
 
             e.addEventListener('click', function () {
                 move = key;
+
                 if (!this.classList.contains('active')) {
                     elNum1[idx].classList.remove('active');
                     elNum1[key].classList.add('active');
@@ -162,7 +175,7 @@ function init() {
     };//List openFun END
 
 
-
+    
     function hashTag(param) {
 
 
@@ -175,27 +188,29 @@ function init() {
             };
         });
 
-        for (let i = 0; i < elHash.length; i++) {
-            let ran = Math.floor(Math.random() * 15);
-            
-            if(mySet.size < 3){
+        let elHashInd = elHash.length;
+        for (let i = 0; i < elHashInd; i++) {
+            let ran = Math.floor(Math.random() * elHash.length);
+
+            if (mySet.size < 3) {
                 if (!mySet.has(ran)) {
                     mySet.add(ran);
-                } else {                
-                    mySet.add(Math.floor(Math.random() * 15));
+                } else {
+                    elHashInd++;
                 }
             }
         }
-        console.log(mySet.size);
 
         mySet.forEach(function (i) {
             elIdx += elHash[i];
 
         });
 
-        if(elHash.length){
+        console.log(elIdx)
+
+        if (elHash.length) {
             elTag.innerHTML = elIdx;
-        }else{
+        } else {
             elTag.innerHTML = '';
             console.log('bbb')
         }
@@ -206,10 +221,12 @@ function init() {
     //hashTag END
 
 
-    elShow.addEventListener('click', function () {
+    elBtn.addEventListener('click', function () {
         hashTag(search.value);
         list(search.value);
     })
 
 }
 window.addEventListener('load', init);
+
+

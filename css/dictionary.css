@@ -1,4 +1,4 @@
-@import url(./common.css);
+@import url("./common.css");
 @media (max-width: 768px) {
   main {
     width: 90%;

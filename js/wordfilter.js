@@ -26,7 +26,7 @@ $.ajax({
 
         $('.search p button').on('click', function () {
             filW = [];
-            inputT = $('#search').val();
+            inputT = $('#word').val();
             
             if(!find(inputT)){
                 $('.relative .three li:nth-of-type(1)').text(`#값이 없습니다.`);

@@ -34,4 +34,15 @@ function pop() {
             $('.pop_bg').css('transform', 'translateX(100%)');
         })
     })
+    
 }
+
+
+
+//top btn
+
+$('.topbtn').on('click', function () {
+
+    $("html").animate({ scrollTop: 0 }, 300);
+    return false;
+});

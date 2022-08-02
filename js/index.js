@@ -1,3 +1,17 @@
+let aaa = '';
+$('.popup').ready(function () {
+    setTimeout(function () {
+        $('#ipt').bind('input', function () {
+            // localStorage.input = ipt.value();
+            aaa = $('#ipt').val();
+
+            localStorage.setItem("key", aaa);
+
+            console.log(aaa);
+        });
+
+    }, 500, clearTimeout)
+});
 
 let page = '';
 let data = '';
@@ -37,6 +51,11 @@ text.forEach(function (el, idx) {
 
     })
 })
+
+
+
+
+
 
 
 $.ajax({
@@ -121,4 +140,3 @@ $.ajax({
         });
     }
 })
-

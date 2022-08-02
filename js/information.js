@@ -1,5 +1,19 @@
+let aaa = '';
+$('.popup').ready(function () {
+    setTimeout(function () {
+        $('#ipt').bind('input', function () {
+            // localStorage.input = ipt.value();
+            aaa = $('#ipt').val();
 
+            localStorage.setItem("key", aaa);
 
+            console.log(aaa);
+        });
+
+    }, 500, clearTimeout)
+});
+
+// import {cube, foo, graph} from 'my-module';
 
 const elBtn1 = document.querySelector('.contain .law-work');
 const elBtn2 = document.querySelector('.contain .law-protect');
@@ -212,7 +226,6 @@ function list(param) {
     });
 
     elBox1.innerHTML = elList[0];
-    
 
     openFun();
 };
