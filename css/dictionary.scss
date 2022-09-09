@@ -6,11 +6,6 @@
         width: 90%;
         margin: 150px auto 100px;
 
-        >.h3 {
-            text-align: center;
-            color: #004032;
-        }
-
         .search {
             width: 80%;
             margin: 20px auto 10px;
@@ -72,44 +67,51 @@
                         padding: 10px 0;
 
                         >p {
-                            width:90%;
+                            width: 90%;
                             padding-top: 2px;
                             font-size: 1em;
                             color: black;
                         }
-                        >.du{
-                            width:10%; height:1em;
-                            padding-top:2px;
-                            // border:1px solid black;
-                            position:relative;
 
-                            >span{
-                                opacity:100%;
-                                transition:0.5s;
-                            }
-                            >span.on{
-                                opacity:0;
-                            }
+                        >.du {
+                            width: 20px;
+                            height: 20px;
+                            text-align: right;
+                            overflow: hidden;
+                            position: relative;
 
-                            >span:nth-of-type(1) {
-                                width:15px; height:2px;
-                                background-color: black;
-                                position:absolute;
-                                left:40%; top:60%;
-                            }
-                            >span:nth-of-type(2) {
-                                width:15px; height:2px;
-                                background-color: black;
-                                transform:rotate(90deg);
-                                position:absolute;
-                                left:40%; top:60%;
+                            button {
+                                width: 100%;
+                                border: none;
+                                outline: none;
+                                background: none;
+                                transition: .5s;
+
+                                span {
+                                    width: 100%;
+                                    border-top: 2px solid #262626;
+                                    position: absolute;
+                                    right: 5%;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    transition: .5s;
+                                }
+
+                                span:nth-of-type(2) {
+                                    transform: rotate(90deg);
+                                }
+
+                                &.active {
+                                    span:nth-of-type(2) {
+                                        transform: rotate(180deg);
+                                    }
+                                }
                             }
                         }
-                        
                     }
 
-                    >.ex {
-                        display:none;
+                    >.answer {
+                        display: none;
                         margin: 0 0 15px;
                         width: 90%;
                         background-color: #F4F1DE;
@@ -119,22 +121,24 @@
                             font-size: 0.8em;
                             word-wrap: wrap;
                         }
-                        &.plus{
-                            display:block;
+
+                        &.plus {
+                            display: block;
                         }
                     }
-                    
+
                 }
 
             }
-            >.more{
-                width:80%;
-                margin:0 auto;
-                text-align:center;
-                font-size:0.9em;
-                font-weight:bold;
+
+            >.more {
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 0.9em;
+                font-weight: bold;
                 background-color: #F4F1DE;
-                padding:7px 0;
+                padding: 7px 0;
             }
         }
     }

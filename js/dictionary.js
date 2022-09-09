@@ -32,42 +32,44 @@ $.ajax({
             result += `<li>
                         <div class="word">
                             <p>${value.용어명}</p>
-                            <div class="du"> 
-                                <span></span>
-                                <span></span>
+                            <div class="du">
+                                <button> 
+                                    <span></span>
+                                    <span></span>
+                                <button>
                             </div>
                         </div>
-                        <div class="ex">
+                        <div class="answer">
                             <p>${value.설명}</p>
                         </div>
                     </li>`;
         })
+
         $('.wl > ul').html(list[0]);
 
         $('li > .word').on('click', function () {
             $('li > .ex').removeClass('plus');
-            $(this).next().addClass('plus');
-            $('.word').find('span:eq(1)').removeClass('on');
-            $(this).find('span:eq(1)').addClass('on');
+            $(this).next().toggleClass('plus');
+            $(this).find('button').toggleClass('active');
         })
 
         $('.wl > .more').on('click', function () {
             count++;
+            
             $('.wl > ul').append(list[count]);
 
             $('li > .word').on('click', function () {
                 $('li > .ex').removeClass('plus');
-                $(this).next().addClass('plus');
-                $('.word').find('span:eq(1)').removeClass('on');
-                $(this).find('span:eq(1)').addClass('on');
+                $(this).next().toggleClass('plus');
+                $(this).find('button').toggleClass('active');
             })
         })
 
 
-        $('.search p button').on('click',function(){
-            if(list.val() == $('.search #word').val()){
+        $('.search p button').on('click', function () {
+            if (list.val() == $('.search #word').val()) {
                 $('.wl > ul').html(list);
-            }s
+            } s
             console.log($('.wl > ul').html(list[key]));
         });
     }
