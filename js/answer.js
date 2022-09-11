@@ -21,7 +21,7 @@ setTimeout(function(){
 function init() {
 
     let data, tag;
-
+// FAQ 데이터 불러옴
     async function dataFn(u1, u2) {
         let a = await fetch(u1);
         let b = await a.json();
@@ -57,7 +57,7 @@ function init() {
     const elPrev = document.querySelector('.pagenum .prev');
     const elNext = document.querySelector('.pagenum .next');
 
-
+// 불러온 데이터 출력
     function list(param) {
         //data print 
         let elData = [], elList = [], elPush = '';
@@ -98,6 +98,9 @@ function init() {
             elBox1.innerHTML = '검색결과 일치한 값이 없습니다';
         }
 
+
+
+        
         //numbtn
         let idx = 0, move = 0;
         elNum1.forEach(function (e, key) {
