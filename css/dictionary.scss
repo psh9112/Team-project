@@ -79,13 +79,13 @@
                             text-align: right;
                             overflow: hidden;
                             position: relative;
+                            transition: .5s;
 
                             button {
                                 width: 100%;
                                 border: none;
                                 outline: none;
                                 background: none;
-                                transition: .5s;
 
                                 span {
                                     width: 100%;
@@ -115,6 +115,7 @@
                         margin: 0 0 15px;
                         width: 90%;
                         background-color: #F4F1DE;
+                        transition: .5s;
 
                         >p {
                             padding: 15px 10px;

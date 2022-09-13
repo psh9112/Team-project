@@ -70,13 +70,13 @@
     text-align: right;
     overflow: hidden;
     position: relative;
+    transition: 0.5s;
   }
   main > .wl > ul > li > .word > .du button {
     width: 100%;
     border: none;
     outline: none;
     background: none;
-    transition: 0.5s;
   }
   main > .wl > ul > li > .word > .du button span {
     width: 100%;
@@ -98,6 +98,7 @@
     margin: 0 0 15px;
     width: 90%;
     background-color: #F4F1DE;
+    transition: 0.5s;
   }
   main > .wl > ul > li > .answer > p {
     padding: 15px 10px;
