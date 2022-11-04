@@ -21,6 +21,7 @@ const elBtns = document.querySelectorAll('.contain p');
 const elTabs = document.querySelectorAll('.object > ul');
 const elList = document.querySelectorAll('.object > ul > li');
 const elBox1 = document.querySelector('.qna .box01 > ul');
+
 let infoData, txt;
 
 $.ajax({
